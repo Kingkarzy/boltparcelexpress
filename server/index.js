@@ -6,9 +6,15 @@ import dotenv from 'dotenv';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import usersRoutes from './routes/user.js'
-
 import adminRoutes from './routes/admin.js'
 import authRoutes from './routes/auth.js'
+
+
+import Admin from './models/Admin.js'; //INJECT DATA MANUALLY INTO DB 
+import Location from './models/Location.js';
+import Package from './models/Package.js';
+import { admin, location, packages } from './data/index.js';
+
 
 dotenv.config();
 
@@ -35,4 +41,7 @@ mongoose.connect(process.env.MONGO_DB_URL, {
     useUnifiedTopology: true,
 }).then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
+    // Admin.insertMany(admin);
+    // Location.insertMany(location);
+    // Package.insertMany(packages);
 }).catch((err) => console.log(`${err} did not connect to the server`));
