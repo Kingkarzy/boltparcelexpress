@@ -5,23 +5,14 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import helmet from 'helmet';
 import morgan from 'morgan';
-<<<<<<< HEAD
-import usersRoutes from './routes/user.js'
-import adminRoutes from './routes/admin.js'
-import authRoutes from './routes/auth.js'
-=======
 import usersRoutes from './routes/user.js';
-
 import adminRoutes from './routes/admin.js';
 import authRoutes from './routes/auth.js';
->>>>>>> main
 
-
-import Admin from './models/Admin.js'; //INJECT DATA MANUALLY INTO DB 
+import Admin from './models/Admin.js'; //INJECT DATA MANUALLY INTO DB
 import Location from './models/Location.js';
 import Package from './models/Package.js';
 import { admin, location, packages } from './data/index.js';
-
 
 dotenv.config();
 
@@ -50,12 +41,8 @@ mongoose
   })
   .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
-<<<<<<< HEAD
     // Admin.insertMany(admin);
     // Location.insertMany(location);
     // Package.insertMany(packages);
-}).catch((err) => console.log(`${err} did not connect to the server`));
-=======
   })
   .catch((err) => console.log(`${err} did not connect to the server`));
->>>>>>> main
