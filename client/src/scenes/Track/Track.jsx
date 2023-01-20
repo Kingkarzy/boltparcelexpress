@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Track = () => {
   return (
     <section className='gallery py-md-5'>

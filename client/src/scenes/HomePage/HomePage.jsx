@@ -1,9 +1,11 @@
+import Navbar from 'components/NavBar/NavBar';
 import React from 'react';
 
 const HomePage = () => {
   return (
     <div>
       <>
+        <Navbar />
         <section class='banner-silder'>
           <div class='banner-top banner-top1'>
             <div class='container'>
