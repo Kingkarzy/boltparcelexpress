@@ -96,7 +96,6 @@ const Navbar = () => {
               '&:hover': {
                 color: primaryLight,
                 cursor: 'pointer',
-                fontSize: '25px',
               },
             }}
           >
@@ -110,7 +109,6 @@ const Navbar = () => {
               '&:hover': {
                 color: primaryLight,
                 cursor: 'pointer',
-                fontSize: '25px',
               },
             }}
           >
@@ -124,7 +122,6 @@ const Navbar = () => {
               '&:hover': {
                 color: primaryLight,
                 cursor: 'pointer',
-                fontSize: '25px',
               },
             }}
           >
