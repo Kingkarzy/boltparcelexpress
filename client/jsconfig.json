@@ -2,5 +2,11 @@
   "compilerOptions": {
     "baseUrl": "src"
   },
+<<<<<<< HEAD
   "include": ["src"]
+=======
+  "include": [
+    "src"
+  ]
+>>>>>>> main
 }
