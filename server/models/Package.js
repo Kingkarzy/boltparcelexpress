@@ -1,15 +1,16 @@
 import mongoose from 'mongoose';
 
 const PackageSchema = new mongoose.Schema({
+
     packageId: {
         type: Number,
         required: true,
-        min: 8,
-        max: 12,
-    }, 
+        min:999, 
+        max:999999999,
+    },
     packageName:{
-        type: String, 
-        required: true,
+        type: String,
+        required: true, 
         min:2,
         max:50,
     },
@@ -27,28 +28,74 @@ const PackageSchema = new mongoose.Schema({
     },
     senderFirstName:{
         type: String, 
-        required: true,
         min:2,
         max:50,
     },
     senderLastName:{
         type: String, 
-        required: true,
         min:2,
         max:50,
     },
     recieverFirstName:{
         type: String, 
-        required: true,
         min:2,
         max:50,
     },
     recieverLastName:{
         type: String, 
+        min:2,
+        max:50,
+    },
+    recieverEmail:{
+        type: String, 
         required: true,
         min:2,
         max:50,
     },
+    recieverPhone:{
+        type: Number,
+        min:99999999,
+        max:99999999999,
+    },
+    currentStatus:{
+        type: String, 
+        required: true,
+        min:2,
+        max:50,
+    },
+    currentLocation:{
+        type: String, 
+        required: true,
+        min:2,
+        max:50,
+    },
+    time:{
+        type: String,  
+        min:2,
+        max:50,
+    },
+    date:{
+        type: Date, 
+        required: true,
+    },
+    pieces:{
+        type: Number, 
+    },
+    origin:{
+        type: String, 
+        required: true,
+        min:2,
+        max:50,
+    },
+    destination:{
+        type: String, 
+        required: true,
+        min:2,
+        max:50,
+    },
+    startDate:{
+        type: Date, 
+    }, 
 
     }, {timestamps: true});
 

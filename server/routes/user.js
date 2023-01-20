@@ -6,6 +6,6 @@ const router  = express.Router();
 
 /** READ */
 
-router.get("/:packageId", verifyUserToken, getTrackId); //get the user id using the query string  
+router.get("/:packageId", getTrackId); //get the user id using the query string  
 
 export default router;

@@ -1,7 +1,16 @@
-import Parcel from '../models/Parcel.js';
-import Customer from '../models/Customer.js';
 import Location from '../models/Location.js';
 import Package from '../models/Package.js';
+
+const date = new Date();
+const format = {
+    dd: date.getDate(),
+   // mm: formatData(date.getMonth() + 1),
+    yyyy: date.getFullYear(),
+    HH:date.getHours(),
+    hh: date.getHours(),
+    // MM: formatData(date.getMinutes()),
+    // SS: formatData(date.getSeconds()),
+  };
 
 export const getAdmin = async (req, res) => {
     try {
@@ -13,61 +22,50 @@ export const getAdmin = async (req, res) => {
     }
 }
 
-export const registerCustomer = async (req, res) => {
-    try{
-         const {
-            recieverFirstName, 
-            recieverLastName, 
-            recieverEmail, 
-            recieverPhone, 
-            senderFirstName, 
-            senderLastName, 
-            packageId, 
-            packageName, 
-            origin, 
-            destination, 
-            startDate
-         } = req.body;
-
-         const newCustomer  = new Customer({
-            recieverFirstName,
-            recieverLastName, 
-            recieverEmail, 
-            recieverPhone, 
-            senderFirstName,
-            senderLastName, 
-            packageId, 
-            packageName, 
-            origin, 
-            destination, 
-            startDate
-         }); 
-         const savedCustomer = await newCustomer.save();
-         res.status(201).json(savedCustomer);
-    }catch(error) {
-        res.status(500).json({error: error.message}); 
-    }
-}
-
 export const registerPackage = async (req, res) => {
     try{
          const {
-            packageId,  
+            packageId,
+            packageName,
             packageType, 
-            packageWeight, 
+            packageWeight,
+            senderFirstName,
+            senderLastName,
+            recieverFirstName,
+            recieverLastName,
+            recieverEmail,
+            recieverPhone,
+            currentStatus, 
+            currentLocation,
+            time, 
+            date,
             pieces,
+            origin,
+            destination,
+            startDate,
          } = req.body;
-         const myParcel = await Customer.findById(packageId);
+
+         const myParcel = await Package.find({ packageId: packageId});
+
          const newPackage  = new Package({
             packageId: myParcel.packageId, 
             packageName: myParcel.packageName,
-            packageType, 
-            packageWeight,
+            packageType: myParcel.packageType, 
+            packageWeight: myParcel.packageWeight,
             senderFirstName: myParcel.senderFirstName,
             senderLastName: myParcel.senderLastName,
             recieverFirstName: myParcel.recieverFirstName,
-            recieverLastName: myParcel.recieverLastName, 
-            pieces,
+            recieverLastName: myParcel.recieverLastName,
+            recieverEmail: myParcel.recieverEmail,
+            recieverPhone: myParcel.recieverPhone,
+            currentStatus, 
+            currentLocation,
+            time: format.hh, 
+            date: format.dd,
+            pieces: myParcel.pieces,
+            origin: myParcel.origin,
+            destination: myParcel.destination,
+            startDate: myParcel.startDate,
          }); 
          const savedPackage = await newPackage.save();
          res.status(201).json(savedPackage);
@@ -75,34 +73,7 @@ export const registerPackage = async (req, res) => {
         res.status(500).json({error: error.message}); 
     }
 }
-export const registerParcel = async (req, res) => {
-    try{
-         const {
-            packageId, 
-            currentStatus,
-            currentLocation,
-            time,
-            date,
-            pieces,
-         } = req.body;
 
-         const myParcel = await Parcel.findById(packageId);
-
-         const newParcel  = new Parcel({
-            packageId: myParcel.packageId,
-            packageName: myParcel.packageName,
-            currentStatus,
-            currentLocation,
-            time,
-            date,
-            pieces: myParcel.pieces,
-         }); 
-         const savedParcel = await newParcel.save();
-         res.status(201).json(savedParcel);
-    }catch(error) {
-        res.status(500).json({error: error.message}); 
-    }
-}
 
 export const registerLocation = async (req, res) => {
     try{
