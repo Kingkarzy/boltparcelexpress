@@ -3,13 +3,13 @@ import Package from '../models/Package.js';
 
 const date = new Date();
 const format = {
-    dd: formatData(date.getDate()),
-    mm: formatData(date.getMonth() + 1),
+    dd: date.getDate(),
+   // mm: formatData(date.getMonth() + 1),
     yyyy: date.getFullYear(),
-    HH: formatData(date.getHours()),
-    hh: formatData(formatHour(date.getHours())),
-    MM: formatData(date.getMinutes()),
-    SS: formatData(date.getSeconds()),
+    HH:date.getHours(),
+    hh: date.getHours(),
+    // MM: formatData(date.getMinutes()),
+    // SS: formatData(date.getSeconds()),
   };
 
 export const getAdmin = async (req, res) => {
