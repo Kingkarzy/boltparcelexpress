@@ -51,6 +51,7 @@ const Home = () => {
         </div>
       </section>
       <br />
+      <br />
       <section className='banner-btm'>
         <div className='container'>
           <Box
@@ -208,8 +209,8 @@ const Home = () => {
 
               <div className='col-md-6 banner_bottom_grid help'>
                 <img
-                  src='../../assets/2.png'
-                  alt='h'
+                  src='../assets/2.png'
+                  alt='Bolt Parcel'
                   className='img-fluid'
                 />
               </div>
@@ -248,7 +249,7 @@ const Home = () => {
           <div className='card-deck pt-4 mt-md-4'>
             <div className='card'>
               <img
-                src='images/g1.jpg'
+                src='../assets/g1.jpg'
                 className='img-fluid'
                 alt='Card'
               />
@@ -264,7 +265,7 @@ const Home = () => {
             </div>
             <div className='card'>
               <img
-                src='images/g2.jpg'
+                src='../assets/g2.jpg'
                 className='img-fluid'
                 alt='Card'
               />
@@ -282,7 +283,7 @@ const Home = () => {
             </div>
             <div className='card'>
               <img
-                src='images/g3.jpg'
+                src='../assets/g3.jpg'
                 className='img-fluid'
                 alt='Card'
               />
@@ -367,7 +368,7 @@ const Home = () => {
             <div className='modal-body'>
               <div className='agileits-w3layouts-info'>
                 <img
-                  src='images/g1.jpg'
+                  src='../assets/g1.jpg'
                   className='img-fluid'
                   alt=''
                 />

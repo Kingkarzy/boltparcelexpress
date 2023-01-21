@@ -19,7 +19,7 @@ const About = () => {
             <div className='row help_full'>
               <div className='col-md-6 banner_bottom_grid help'>
                 <img
-                  src='images/g1.jpg'
+                  src='../assets/g1.jpg'
                   alt=' '
                   className='img-fluid'
                 />
@@ -46,9 +46,12 @@ const About = () => {
             Chain today.!
           </p>
           <div className='row inner-sec-w3layouts-agileinfo pt-4 mt-md-4'>
-            <div className='col-md-3 col-sm-6 team-grids'>
+            <div
+              className='col-md-3 col-sm-6 team-grids'
+              style={{ height: '15rem' }}
+            >
               <img
-                src='images/t1.jpg'
+                src='../assets/t1.jpg'
                 className='img-fluid'
                 alt=''
               />
@@ -67,7 +70,7 @@ const About = () => {
             </div>
             <div className='col-md-3 col-sm-6 team-grids'>
               <img
-                src='images/t2.JPG'
+                src='../assets/t2.JPG'
                 className='img-fluid'
                 alt=''
               />
@@ -87,7 +90,7 @@ const About = () => {
             </div>
             <div className='col-md-3 col-sm-6 team-grids'>
               <img
-                src='images/t3.jpg'
+                src='../assets/t3.jpg'
                 className='img-fluid'
                 alt=''
               />
@@ -109,7 +112,7 @@ const About = () => {
             </div>
             <div className='col-md-3 col-sm-6 team-grids'>
               <img
-                src='images/t4.jpg'
+                src='../assets/t4.jpg'
                 className='img-fluid'
                 alt=''
               />
