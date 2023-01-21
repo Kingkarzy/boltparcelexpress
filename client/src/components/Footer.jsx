@@ -6,7 +6,7 @@ const Footer = () => {
           <div className='row footer_inner_info_w3ls_agileits'>
             <div className='col-md-3 footer-left'>
               <h2>
-                <a href='index.php'> Shipping</a>
+                <a href='/'> Shipping</a>
               </h2>
               <p className='mb-3 mt-3'>
                 From packages to pallets, and local to global, get flexible,

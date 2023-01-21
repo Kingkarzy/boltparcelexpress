@@ -36,6 +36,11 @@ const Navbar = () => {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
+        position: 'fixed',
+        width: '100%',
+        zIndex: '1',
+        boxShadow:
+          '0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%)',
       }}
       padding='1rem 6%'
       backgroundColor={alt}
@@ -193,6 +198,71 @@ const Navbar = () => {
             alignItems='center'
             gap='3rem'
           >
+            <Typography
+              fontWeight='bold'
+              // color='primary'
+              onClick={() => navigate('/')}
+              sx={{
+                '&:hover': {
+                  color: '#00D5FA',
+                  cursor: 'pointer',
+                },
+              }}
+            >
+              Home
+            </Typography>
+            <Typography
+              fontWeight='bold'
+              // color='primary'
+              onClick={() => navigate('/about')}
+              sx={{
+                '&:hover': {
+                  color: '#00D5FA',
+                  cursor: 'pointer',
+                },
+              }}
+            >
+              About
+            </Typography>
+            <Typography
+              fontWeight='bold'
+              // color='primary'
+              onClick={() => navigate('/contact')}
+              sx={{
+                '&:hover': {
+                  color: '#00D5FA',
+                  cursor: 'pointer',
+                },
+              }}
+            >
+              Contact
+            </Typography>
+            <Typography
+              fontWeight='bold'
+              // color='primary'
+              onClick={() => navigate('/services')}
+              sx={{
+                '&:hover': {
+                  color: '#00D5FA',
+                  cursor: 'pointer',
+                },
+              }}
+            >
+              Services
+            </Typography>
+            <Typography
+              fontWeight='bold'
+              // color='primary'
+              onClick={() => navigate('/track')}
+              sx={{
+                '&:hover': {
+                  color: '#00D5FA',
+                  cursor: 'pointer',
+                },
+              }}
+            >
+              Track
+            </Typography>
             <IconButton
               onClick={() => dispatch(setMode())}
               sx={{ fontSize: '25px' }}
@@ -203,8 +273,6 @@ const Navbar = () => {
                 <LightMode sx={{ color: dark, fontSize: '25px' }} />
               )}
             </IconButton>
-            <Notifications sx={{ fontSize: '25px' }} />
-            <Help sx={{ fontSize: '25px' }} />
           </Box>
         </Box>
       )}

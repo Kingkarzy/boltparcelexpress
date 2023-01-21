@@ -103,6 +103,7 @@ const Home = () => {
                   borderRadius: '10px',
                   width: '18rem',
                   minHeight: '25.5rem',
+                  maxHeight: '25.5rem',
                 }}
                 className='banner-subg1'
               >
@@ -133,6 +134,7 @@ const Home = () => {
                   borderRadius: '10px',
                   width: '18rem',
                   minHeight: '25.5rem',
+                  //   maxHeight: '25.5rem',
                 }}
                 className='banner-btmg1'
               >

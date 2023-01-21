@@ -2,7 +2,6 @@ import {
   Box,
   Typography,
   Card,
-  CardMedia,
   FormControl,
   TextField,
   Paper,
@@ -11,7 +10,6 @@ import {
   Button,
   IconButton,
   Link,
-  InputLabel,
 } from '@mui/material';
 
 import LanguageIcon from '@mui/icons-material/Language';
