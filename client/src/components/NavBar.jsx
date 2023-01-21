@@ -144,13 +144,13 @@ const Navbar = () => {
           >
             Track
           </Typography>
-          <IconButton onClick={() => dispatch(setMode())}>
+          {/*  <IconButton onClick={() => dispatch(setMode())}>
             {theme.palette.mode === 'dark' ? (
               <DarkMode sx={{ fontSize: '25px' }} />
             ) : (
               <LightMode sx={{ color: dark, fontSize: '25px' }} />
             )}
-          </IconButton>
+          </IconButton> */}
         </Box>
       ) : (
         <IconButton
@@ -263,7 +263,7 @@ const Navbar = () => {
             >
               Track
             </Typography>
-            <IconButton
+            {/*  <IconButton
               onClick={() => dispatch(setMode())}
               sx={{ fontSize: '25px' }}
             >
@@ -272,7 +272,7 @@ const Navbar = () => {
               ) : (
                 <LightMode sx={{ color: dark, fontSize: '25px' }} />
               )}
-            </IconButton>
+            </IconButton> */}
           </Box>
         </Box>
       )}

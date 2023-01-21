@@ -2,13 +2,17 @@ import { Box, Card, IconButton } from '@mui/material';
 import $ from 'jquery';
 import LanguageIcon from '@mui/icons-material/Language';
 import PersonIcon from '@mui/icons-material/Person';
+// import Package from '../../../../server/models/Package';
 
 const Home = () => {
   return (
     <Box>
       <section className='banner-silder'>
         <div className='banner-top banner-top1'>
-          <div className='container'>
+          <div
+            className='container'
+            style={{ padding: '3rem 0 0 0' }}
+          >
             <div className='banner-info info2'>
               <h3>
                 <b className='text-success'> BOLT FLASH EXPRESS </b>
