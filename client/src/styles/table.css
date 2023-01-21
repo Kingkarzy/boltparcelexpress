@@ -1,0 +1,12 @@
+
+.table1{
+	width: 100%;
+	border: 1px solid black;
+}
+.table2 {
+  border-collapse: collapse;
+
+}
+th {
+  height: 70px;
+}

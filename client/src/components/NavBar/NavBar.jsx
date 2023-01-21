@@ -77,7 +77,7 @@ const Navbar = () => {
           <Typography
             fontWeight='bold'
             // color='primary'
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/about')}
             sx={{
               '&:hover': {
                 color: '#00D5FA',
@@ -90,7 +90,7 @@ const Navbar = () => {
           <Typography
             fontWeight='bold'
             // color='primary'
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/contact')}
             sx={{
               '&:hover': {
                 color: '#00D5FA',
@@ -103,7 +103,7 @@ const Navbar = () => {
           <Typography
             fontWeight='bold'
             // color='primary'
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/services')}
             sx={{
               '&:hover': {
                 color: '#00D5FA',
@@ -116,7 +116,7 @@ const Navbar = () => {
           <Typography
             fontWeight='bold'
             // color='primary'
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/track')}
             sx={{
               '&:hover': {
                 color: '#00D5FA',
