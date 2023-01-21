@@ -55,7 +55,7 @@ const Navbar = () => {
           onClick={() => navigate('/')}
           sx={{
             '&:hover': {
-              color: primaryLight,
+              color: '#AD4E00',
               cursor: 'pointer',
             },
           }}
@@ -80,9 +80,8 @@ const Navbar = () => {
             onClick={() => navigate('/')}
             sx={{
               '&:hover': {
-                color: primaryLight,
+                color: '#00D5FA',
                 cursor: 'pointer',
-                fontSize: '25px',
               },
             }}
           >
@@ -94,9 +93,8 @@ const Navbar = () => {
             onClick={() => navigate('/')}
             sx={{
               '&:hover': {
-                color: primaryLight,
+                color: '#00D5FA',
                 cursor: 'pointer',
-                fontSize: '25px',
               },
             }}
           >
@@ -108,9 +106,8 @@ const Navbar = () => {
             onClick={() => navigate('/')}
             sx={{
               '&:hover': {
-                color: primaryLight,
+                color: '#00D5FA',
                 cursor: 'pointer',
-                fontSize: '25px',
               },
             }}
           >
@@ -122,9 +119,8 @@ const Navbar = () => {
             onClick={() => navigate('/')}
             sx={{
               '&:hover': {
-                color: primaryLight,
+                color: '#00D5FA',
                 cursor: 'pointer',
-                fontSize: '25px',
               },
             }}
           >
