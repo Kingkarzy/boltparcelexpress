@@ -1,16 +1,116 @@
-import Navbar from 'components/NavBar/NavBar';
-import { Box, Typography, Card, CardMedia } from '@mui/material';
+import {
+  Box,
+  Typography,
+  Card,
+  CardMedia,
+  FormControl,
+  TextField,
+  Paper,
+  InputBase,
+  Divider,
+  Button,
+} from '@mui/material';
+
+/* root: ({ bgColor = 'rgba(0, 0, 0, 0.08)', bgPosition = 'center' }) => ({
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    top: 0,
+    left: 0,
+    zIndex: 0,
+    backgroundColor: bgColor,
+    backgroundPosition: bgPosition,
+  }), */
 
 const HomePage = () => {
+  const styles = {
+    root: ({ bgColor = 'rgba(0, 0, 0, 0.08)', bgPosition = 'center' }) => ({
+      position: 'absolute',
+      width: '100%',
+      height: '100%',
+      top: 0,
+      left: 0,
+      zIndex: 0,
+      backgroundColor: bgColor,
+      backgroundPosition: bgPosition,
+    }),
+  };
+
   return (
-    <Box sx={{ margin: '2rem' }}>
-      <Box>
-        <Card>
-          <CardMedia></CardMedia>
-          <Typography variant='h4'>Track Your Package</Typography>
-          <p>
-            NOTE: Please enter your tracking number in the box provided below
-          </p>
+    <Box sx={{ margin: '1.5rem' }}>
+      <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+        <Card
+          position={'relative'}
+          width={'100%'}
+          height={'100%'}
+          p={2}
+          sx={{ width: '45rem', display: 'inline-block', textAlign: 'center' }}
+        >
+          <CardMedia
+            component='img' // add this line to use <img />
+            height='140'
+            image='../../assets/g17.JPG'
+            sx={{
+              position: 'absolute',
+              width: '100%',
+              height: '50%',
+              top: 0,
+              left: 0,
+              zIndex: 0,
+              backgroundColor: 'rgba(0, 0, 0, 0.08)',
+              backgroundPosition: 'center',
+            }}
+          />
+          <Typography
+            variant='h4'
+            sx={{
+              margin: '0.5rem',
+              display: 'flex',
+              justifyContent: 'center',
+              fontWeight: '800',
+            }}
+          >
+            Track Your Package
+          </Typography>
+
+          <Paper
+            component='form'
+            sx={{
+              p: '2px 4px',
+              display: 'flex',
+              justifyContent: 'center',
+              width: '30rem',
+              margin: '1rem auto',
+              boxShadow: '1px',
+            }}
+          >
+            {/* <TextField
+              id='filled-search'
+              // fullWidth
+              label='Search field'
+              type='search'
+              helperText={
+                'NOTE: Please enter your tracking number in the box provided'
+              }
+              sx={{ width: '30rem' }}
+            /> */}
+            <InputBase
+              sx={{
+                ml: 1,
+                flex: 1,
+                display: 'flex',
+                alignItems: 'center',
+                margin: 'auto',
+              }}
+              placeholder='Enter Tracking Number'
+              inputProps={{ 'aria-label': 'enter tracking number' }}
+            />
+            <Divider
+              sx={{ height: 28, m: 0.5 }}
+              orientation='vertical'
+            />
+            <Button>TRACK</Button>
+          </Paper>
         </Card>
       </Box>
 
