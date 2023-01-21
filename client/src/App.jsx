@@ -7,7 +7,6 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 import { themeSettings } from './theme';
 import AdminPage from 'scenes/AdminPage/AdminPage';
-import Navbar from 'components/NavBar/NavBar';
 
 function App() {
   const mode = useSelector((state) => state.mode);
@@ -19,7 +18,6 @@ function App() {
       <BrowserRouter>
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          <Navbar />
           <Routes>
             <Route
               path='/'
