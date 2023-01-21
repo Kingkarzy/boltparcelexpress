@@ -12,7 +12,7 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 import { themeSettings } from './theme';
 import AdminPage from 'scenes/AdminPage/AdminPage';
-import Navbar from 'components/NavBar/NavBar';
+import Navbar from 'components/NavBar';
 import './styles/bootstrap.css';
 import './styles/chocolat.css';
 import './styles/flexslider.css';
@@ -20,6 +20,7 @@ import './styles/font-awesome.css';
 import './styles/JiSlider.css';
 import './styles/style.css';
 import './styles/table.css';
+import Footer from 'components/Footer';
 
 function App() {
   const mode = useSelector((state) => state.mode);
@@ -62,6 +63,7 @@ function App() {
               element={isAuth ? <AdminPage /> : <Navigate to='/' />}
             />
           </Routes>
+          <Footer />
         </ThemeProvider>
       </BrowserRouter>
     </div>

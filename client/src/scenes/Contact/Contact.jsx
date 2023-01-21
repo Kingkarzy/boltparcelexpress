@@ -13,7 +13,7 @@ const Contact = () => {
                 <h6 style={{ color: 'rgb(185, 180, 180)', margin: '15px' }}>
                   We’d Love To Hear From You.
                 </h6>
-                <div style={{ 'text-align': 'left' }}>
+                <div style={{ textAlign: 'left' }}>
                   <p>
                     {' '}
                     <i className='fa fa-location-arrow'></i>&emsp; 7899

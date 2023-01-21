@@ -1,5 +1,7 @@
-import { Box, Card } from '@mui/material';
+import { Box, Card, IconButton } from '@mui/material';
 import $ from 'jquery';
+import LanguageIcon from '@mui/icons-material/Language';
+import PersonIcon from '@mui/icons-material/Person';
 
 const Home = () => {
   return (
@@ -9,7 +11,7 @@ const Home = () => {
           <div className='container'>
             <div className='banner-info info2'>
               <h3>
-                <b className='text-success'> UPC - EXPRESS </b>
+                <b className='text-success'> BOLT FLASH EXPRESS </b>
               </h3>
               <h2 style={{ color: 'white' }}>Track Package</h2>
               <p>
@@ -21,6 +23,7 @@ const Home = () => {
                 style={{ width: '50%', margin: 'auto', color: 'white' }}
                 className='input-group-lg'
               >
+                {/* FORM  */}
                 <form
                   action='includes/action_page.php'
                   method='post'
@@ -48,30 +51,63 @@ const Home = () => {
         </div>
       </section>
       <br />
-      <br />
-      <br />
       <section className='banner-btm'>
         <div className='container'>
-          <div className='row banner-bottom-main'>
+          <Box
+            sx={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(3, 1fr)',
+              '@media (max-width:1024px)': {
+                gridTemplateColumns: 'repeat(2, 1fr)',
+                gridColumnGap: '0.1rem',
+              },
+              '@media (max-width:767px)': {
+                gridTemplateColumns: 'repeat(1, 1fr)',
+              },
+            }}
+            className='row banner-bottom-main'
+          >
             <div className='col-md-4 banner-grid2'>
-              <div className='banner-subg1'>
-                <span
-                  className='fa fa-globe'
-                  aria-hidden='true'
-                ></span>
+              <Card
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  maxWidth: 500,
+                  margin: '20px auto',
+                  borderRadius: '10px',
+                  width: '18rem',
+                  minHeight: '25.5rem',
+                }}
+                className='banner-subg1'
+              >
+                <IconButton>
+                  <LanguageIcon sx={{ fontSize: '4rem' }} />
+                </IconButton>
                 <h3 className='mt-3'>Express Shipping with UPC</h3>
                 <p className='mt-3 mb-3'>
                   Get expert shipping advice and customs support to prepare and
                   manage your express shipments!
                 </p>
-              </div>
+              </Card>
             </div>
             <div className='col-md-4 banner-grid2'>
-              <div className='banner-subg1'>
-                <span
-                  className='fa fa-user'
-                  aria-hidden='true'
-                ></span>
+              <Card
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  maxWidth: 500,
+                  margin: '20px auto',
+                  borderRadius: '10px',
+                  width: '18rem',
+                  minHeight: '25.5rem',
+                }}
+                className='banner-subg1'
+              >
+                <IconButton>
+                  <PersonIcon sx={{ fontSize: '4rem' }} />
+                </IconButton>
                 <h3 className='mt-3'>Can We Help?</h3>
                 <p className='mt-3 mb-3'>
                   Having trouble arranging a shipment online or tracking a
@@ -83,13 +119,30 @@ const Home = () => {
                     UPC Express customer service
                   </a>
                 </div>
-              </div>
+              </Card>
             </div>
             <div className='col-md-4 banner-btmg'>
-              <div className='banner-btmg1'>
+              <Card
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  maxWidth: '20rem',
+                  margin: '20px auto',
+                  borderRadius: '10px',
+                  width: '18rem',
+                  minHeight: '25.5rem',
+                }}
+                className='banner-btmg1'
+              >
                 <div className='form-text'>
                   <h3 className='text-center'>Contact </h3>
-                  <p className='text-center'>Email Customer Service</p>
+                  <p
+                    className='text-center'
+                    style={{ color: 'grey' }}
+                  >
+                    Email Customer Service
+                  </p>
                 </div>
                 <form
                   action='#'
@@ -120,9 +173,9 @@ const Home = () => {
                     value='Send Message'
                   />
                 </form>
-              </div>
+              </Card>
             </div>
-          </div>
+          </Box>
         </div>
       </section>
       <section className='banner_bottom'>
@@ -286,202 +339,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <footer>
-        <section className='footer py-md-5'>
-          <div className='container py-4 mt-2'>
-            <div className='row footer_inner_info_w3ls_agileits'>
-              <div className='col-md-3 footer-left'>
-                <h2>
-                  <a href='index.php'> Shipping</a>
-                </h2>
-                <p className='mb-3 mt-3'>
-                  From packages to pallets, and local to global, get flexible,
-                  reliable, and afforable shipping solutions that fit your
-                  business.
-                </p>
-                <ul className='social-nav footer-social social two'>
-                  <li>
-                    <a href='#'>
-                      <i
-                        className='fab fa-facebook-f'
-                        aria-hidden='true'
-                      ></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#'>
-                      <i
-                        className='fab fa-twitter'
-                        aria-hidden='true'
-                      ></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#'>
-                      <i
-                        className='fab fa-instagram'
-                        aria-hidden='true'
-                      ></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div className='col-md-2 sign-gd'>
-                <h4>Useful Links</h4>
-                <ul>
-                  <li>
-                    <a href='/'>Home</a>
-                  </li>
-                  <li>
-                    <a href='/about'>About</a>
-                  </li>
-                  <li>
-                    <a href='/services'>Services</a>
-                  </li>
-                  <li>
-                    <a href='/contact'>Contact</a>
-                  </li>
-                  <li>
-                    <a href='/track'>Tracking</a>
-                  </li>
-                </ul>
-              </div>
-              <div className='col-md-4 sign-gd flickr-post'>
-                <h4>Gallery</h4>
-                <ul>
-                  <li>
-                    <a href='#'>
-                      <img
-                        src='../../assets/g10.JPG'
-                        alt=''
-                        className='img-fluid'
-                      />
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#'>
-                      <img
-                        src='../../assets/g11.JPG'
-                        alt=''
-                        className='img-fluid'
-                      />
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#'>
-                      <img
-                        src='../../assets/g12.JPG'
-                        alt=''
-                        className='img-fluid'
-                      />
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#'>
-                      <img
-                        src='../../assets/g13.JPG'
-                        alt=''
-                        className='img-fluid'
-                      />
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#'>
-                      <img
-                        src='../../assets/g14.JPG'
-                        alt=''
-                        className='img-fluid'
-                      />
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#'>
-                      <img
-                        src='../../assets/g15.JPG'
-                        alt=''
-                        className='img-fluid'
-                      />
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#'>
-                      <img
-                        src='../../assets/g17.JPG'
-                        alt=''
-                        className='img-fluid'
-                      />
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#'>
-                      <img
-                        src='../../assets/g18.JPG'
-                        alt=''
-                        className='img-fluid'
-                      />
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#'>
-                      <img
-                        src='../../assets/g19.JPG'
-                        alt=''
-                        className='img-fluid'
-                      />
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className='col-md-3 sign-gd-two'>
-                <h4>Contact Information</h4>
-                <div className='address'>
-                  <div className='address-grid'>
-                    <div className='address-left'>
-                      <i
-                        className='fa fa-envelope'
-                        aria-hidden='true'
-                      ></i>
-                    </div>
-                    <div className='address-right'>
-                      <h6>Email Address</h6>
-                      <p>
-                        <a href='mailto:info@upcxpress.com'>
-                          {' '}
-                          info@upcxpress.com{' '}
-                        </a>
-                      </p>
-                    </div>
-                    <div className='clearfix'> </div>
-                  </div>
-                  <div className='address-grid'>
-                    <div className='address-left'>
-                      <i
-                        className='fa fa-map-marker'
-                        aria-hidden='true'
-                      ></i>
-                    </div>
-                    <div className='address-right'>
-                      <h6>Location</h6>
-                      <p>
-                        7899 Cedarwood Dr. San Jose, CA 95116 California, United
-                        States.
-                      </p>
-
-                      <p>70372 Baden-Wurttemberg Stuttgart, Germany </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* </br>
-		</br> */}
-            <div style={{ textAlign: 'center', color: 'grey' }}>
-              Copyright&copy; 2020 UPC Express, Inc. All rights reserved
-            </div>
-          </div>
-        </section>
-      </footer>
 
       <div
         className='modal fade'

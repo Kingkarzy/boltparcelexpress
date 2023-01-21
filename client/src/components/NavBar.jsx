@@ -51,11 +51,11 @@ const Navbar = () => {
         <Typography
           fontWeight='bold'
           fontSize='clamp(1rem, 2rem, 2.25rem)'
-          color='primary'
+          color='#CCAF2D'
           onClick={() => navigate('/')}
           sx={{
             '&:hover': {
-              color: '#AD4E00',
+              color: '#28a745',
               cursor: 'pointer',
             },
           }}
@@ -74,6 +74,19 @@ const Navbar = () => {
           }}
           gap='2rem'
         >
+          <Typography
+            fontWeight='bold'
+            // color='primary'
+            onClick={() => navigate('/')}
+            sx={{
+              '&:hover': {
+                color: '#00D5FA',
+                cursor: 'pointer',
+              },
+            }}
+          >
+            Home
+          </Typography>
           <Typography
             fontWeight='bold'
             // color='primary'
