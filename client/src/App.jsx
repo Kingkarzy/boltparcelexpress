@@ -1,5 +1,6 @@
 import { BrowserRouter, Navigate, Routes, Route } from 'react-router-dom';
 import HomePage from 'scenes/HomePage/HomePage';
+import Read from 'scenes/HomePage/Read';
 import LoginPage from 'scenes/LoginPage/LoginPage';
 import { useMemo } from 'react';
 import { useSelector } from 'react-redux';
@@ -26,6 +27,10 @@ function App() {
             <Route
               path='/admin900'
               element={<LoginPage />}
+            />
+             <Route
+              path='/Read'
+              element={<Read />}
             />
             <Route
               path='/admin-Dashboard'

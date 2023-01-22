@@ -33,7 +33,7 @@ export const verifyUserToken = async (req, res, next) => {
         }
 
         const verified = jwt.verify(token, process.env.JWT_SECRET);
-        req.user = verified.user;
+        req.package = verified.package;
         next();
     } catch (error) {
         res.status(500).json({ error: error.message });

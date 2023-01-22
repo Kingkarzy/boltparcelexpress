@@ -1,8 +1,45 @@
+<<<<<<< Updated upstream
 import Navbar from 'components/NavBar/NavBar';
 import React from 'react';
+=======
+import {
+  Box,
+  Typography,
+  Card,
+  CardMedia,
+  FormControl,
+  TextField,
+  Paper,
+  InputBase,
+  Divider,
+  Button,
+  IconButton,
+  Link,
+  InputLabel,
+} from '@mui/material';
+
+import LanguageIcon from '@mui/icons-material/Language';
+import PersonIcon from '@mui/icons-material/Person';
+import Image from 'mui-image';
+import Form from './Form.jsx';
+/** kama  */
+
+
+/* root: ({ bgColor = 'rgba(0, 0, 0, 0.08)', bgPosition = 'center' }) => ({
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    top: 0,
+    left: 0,
+    zIndex: 0,
+    backgroundColor: bgColor,
+    backgroundPosition: bgPosition,
+  }), */
+>>>>>>> Stashed changes
 
 const HomePage = () => {
   return (
+<<<<<<< Updated upstream
     <div>
       <>
         <Navbar />
@@ -19,6 +56,249 @@ const HomePage = () => {
                   below
                 </p>
               </div>
+=======
+    <Box sx={{ margin: '1.5rem' }}>
+      <Form />
+      {/* END TRACKING */}
+      <Box
+        sx={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(3, 1fr)',
+          '@media (max-width:1024px)': {
+            gridTemplateColumns: 'repeat(2, 1fr)',
+            gridColumnGap: '0.1rem',
+          },
+          '@media (max-width:767px)': {
+            gridTemplateColumns: 'repeat(1, 1fr)',
+          },
+        }}
+      >
+        <Card
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            maxWidth: 500,
+            margin: '20px auto',
+            borderRadius: '10px',
+            width: '340px',
+          }}
+        >
+          <IconButton>
+            <LanguageIcon />
+          </IconButton>
+          <Typography variant='h4'>Express Shipping with UPC</Typography>
+          <Typography variant='subtitle1'>
+            Get expert shipping advice and customs support to prepare and manage
+            your express shipments!
+          </Typography>
+        </Card>
+
+        <Card
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            maxWidth: 500,
+            margin: '20px auto',
+            borderRadius: '10px',
+            width: '340px',
+          }}
+        >
+          <IconButton>
+            <PersonIcon />
+          </IconButton>
+          <Typography variant='h4'>Can We Help?</Typography>
+          <Typography variant='subtitle1'>
+            Having trouble arranging a shipment online or tracking a package?
+            Our UPC Express Customer Service agents are here to help you!
+          </Typography>
+          <Link
+            href='mailto:info@upcxpress.com'
+            underline='none'
+          >
+            UPC Express customer service
+          </Link>
+        </Card>
+        <Card
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            maxWidth: 500,
+            margin: '20px auto',
+            borderRadius: '10px',
+            width: '340px',
+          }}
+        >
+          <Typography variant='h4'>Contact</Typography>
+          <Typography variant='subtitle1'>Email Customer Service</Typography>
+          <FormControl>
+            {/* <InputLabel>Email Address</InputLabel> */}
+            <InputBase
+              sx={{
+                ml: 1,
+                flex: 1,
+                display: 'flex',
+                alignItems: 'center',
+                margin: 'auto',
+                backgroundColor: 'grey',
+              }}
+              placeholder='Email Address'
+              inputProps={{ 'aria-label': 'email address' }}
+            />
+            <TextField
+              id='outlined-multiline-flexible'
+              // label='Multiline'
+              multiline
+              maxRows={4}
+              placeholder='Message'
+            />
+            <Button
+              gap='0.25rem'
+              // disabled={!post}
+              // onClick={handlePost}
+              sx={{
+                // color: palette.background.alt,
+                // backgroundColor: palette.primary.main,
+                borderRadius: '0.25rem',
+                '&:hover': {
+                  cursor: 'pointer',
+                  borderStyle: 'solid',
+                  // borderColor: palette.primary.main,
+                  // color: palette.primary.main,
+                  // backgroundColor: palette.background.alt,
+                },
+              }}
+            >
+              POST
+            </Button>
+          </FormControl>
+        </Card>
+      </Box>
+
+      {/*  */}
+      <Box sx={{ display: 'grid', gridTemplateColumns: '50% 1fr' }}>
+        <Box>
+          <Typography
+            variant='h4'
+            sx={{ fontWeight: '800' }}
+          >
+            Specialty Moves? We’re a company up to the challenge!
+          </Typography>
+          <Typography variant='subtitle1'>
+            Get expert shipping/delivery advice and customs support to prepare
+            and manage your express shipments! As an expert in international
+            shipping and freight delivery, United Parcel Courier is a worldwide
+            delivery express that understands the needs of small and medium
+            businesses. United Parcel Courier is the largest
+            consumer-to-consumer package transportation company from the United
+            States to Europe. With over 60 years of experience handing ocean and
+            air shipments, Sky Delivery and our operating companies have earned
+            our reputation as a consistent, trusted, carrier that is relied upon
+            to cost effectively handle shipments to 43 countries.
+          </Typography>
+          <Typography
+            variant='subtitle1'
+            mt='0.5rem'
+          >
+            United Parcel Courier – you’re shipping with specialists in
+            international shipping and courier delivery services! With our wide
+            range of express parcel and package services, along with shipping
+            and tracking solutions to fit your needs – learn how United Parcel
+            Courier can deliver!
+          </Typography>
+        </Box>
+        <Image src='images/2.png' />
+      </Box>
+
+      {/* <!-- testimonials --> */}
+      <Box sx={{ display: 'block' }}>
+        <Typography
+          variant='h2'
+          sx={{ display: 'flex', justifyContent: 'center', fontWeight: '1000' }}
+        >
+          Express Delivery Services & International Shipping
+        </Typography>
+        <Typography
+          variant='subtitle1'
+          sx={{
+            display: 'flex',
+            textAlign: 'center',
+          }}
+        >
+          When you ship with UPC Express – you’re shipping with specialists in
+          international shipping and courier delivery services! With our wide
+          range of express parcel and package services, along with shipping and
+          tracking solutions to fit your needs – learn how UPC Express can
+          deliver!
+        </Typography>
+      </Box>
+
+      <Divider />
+
+      <Box sx={{ display: 'block' }}>
+        <Typography
+          variant='h2'
+          sx={{ display: 'flex', justifyContent: 'center', fontWeight: '1000' }}
+        >
+          How UPC is responding to the Coronavirus
+        </Typography>
+        <Typography
+          variant='subtitle1'
+          sx={{
+            display: 'flex',
+            textAlign: 'center',
+            margin: 'auto',
+            maxWidth: '750px',
+          }}
+        >
+          UPC continues to deliver worldwide. In the U.S., UPC is designated
+          among the government’s critical infrastructure and, therefore,
+          operations continue as normal. We also continue to deliver to
+          locations around the world, where permitted. As always, our highest
+          priority is to help ensure the health and safety of our employees,
+          customers, and suppliers while meeting our service commitments.
+        </Typography>
+        <Box
+          sx={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            '@media (max-width:1024px)': {
+              gridTemplateColumns: 'repeat(2, 1fr)',
+              gridColumnGap: '0.1rem',
+            },
+            '@media (max-width:767px)': {
+              gridTemplateColumns: 'repeat(1, 1fr)',
+            },
+          }}
+        >
+          <Card
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              maxWidth: 500,
+              margin: '20px auto',
+              borderRadius: '10px',
+              width: '340px',
+            }}
+          >
+            <Divider />
+            <img
+              src='images/g1.jpg'
+              className='img-fluid'
+              alt='Card'
+            />
+            <div className='card-body w3ls-card'>
+              <h5 className='card-title'>
+                Small and Medium Business Solutions
+              </h5>
+              <p className='card-text mb-3 '>
+                As an expert in international shipping, UPC Express understands
+                the needs of small and medium businesses.
+              </p>
+>>>>>>> Stashed changes
             </div>
           </div>
         </section>

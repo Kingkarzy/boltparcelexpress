@@ -16,13 +16,13 @@ const Track = () => {
                 <input
                   id='tracking-input'
                   type='input'
-                  name='tracking-id'
+                  name='packageId'
                 />
                 <label>up to 10 codes</label>
                 <button type='submit'>Track</button>
               </div>
             </div>
-            <p>Please enter your tracking number(s)</p>
+            <p>Enter tracking number(s)</p>
           </form>
         </div>
       </div>
