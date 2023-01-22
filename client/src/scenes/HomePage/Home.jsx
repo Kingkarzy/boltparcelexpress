@@ -2,9 +2,24 @@ import { Box, Card, IconButton } from '@mui/material';
 import $ from 'jquery';
 import LanguageIcon from '@mui/icons-material/Language';
 import PersonIcon from '@mui/icons-material/Person';
+import { useState, useEffect } from 'react';
 // import Package from '../../../../server/models/Package';
 
 const Home = () => {
+  const [packageDetails, setPackageDetails] = useState(null);
+  const handleSubmit = async (event) => {
+    const response = await fetch(`http://localhost:5001/user/:packageId"`, {
+      method: 'GET',
+      headers: { Authorization: `Bearer ` },
+    });
+    const data = await response.json;
+    setPackageDetails(data);
+  };
+
+  useEffect(() => {
+    handleSubmit();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
   return (
     <Box>
       <section className='banner-silder'>
@@ -29,7 +44,7 @@ const Home = () => {
               >
                 {/* FORM  */}
                 <form
-                  action='includes/action_page.php'
+                  onSubmit={handleSubmit}
                   method='post'
                   className=''
                 >
@@ -49,6 +64,29 @@ const Home = () => {
                     value='Track'
                   />
                 </form>
+                <div>
+                  {packageDetails && (
+                    <div>
+                      <p>Package Id: {packageDetails.packageId}</p>
+                      <p>Package Name: {packageDetails.packageName}</p>
+                      <p>Package Type: {packageDetails.packageType}</p>
+                      <p>Package Weight: {packageDetails.packageWeight}</p>
+                      <p>
+                        Sender Name: {packageDetails.senderFirstName}{' '}
+                        {packageDetails.senderLastName}
+                      </p>
+                      <p>
+                        Reciever Name: {packageDetails.recieverFirstName}{' '}
+                        {packageDetails.recieverLastName}
+                      </p>
+                      <p>Reciever Email: {packageDetails.recieverEmail}</p>
+                      <p>Reciever Phone: {packageDetails.recieverPhone}</p>
+                      <p>Current Status: {packageDetails.currentStatus}</p>
+                      <p>Current Location: {packageDetails.currentLocation}</p>
+                      <p>Time: {packageDetails.time}</p>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>
