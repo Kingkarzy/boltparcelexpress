@@ -19,7 +19,8 @@ import { setMode } from 'state';
 import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
-  const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
+  const [isMobileMenuToggled, setIsMobileMenuToggled] =
+    useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const isNonMobileScreens = useMediaQuery('(min-width: 1024px)');
@@ -144,13 +145,13 @@ const Navbar = () => {
           >
             Track
           </Typography>
-          {/*  <IconButton onClick={() => dispatch(setMode())}>
+          <IconButton onClick={() => dispatch(setMode())}>
             {theme.palette.mode === 'dark' ? (
               <DarkMode sx={{ fontSize: '25px' }} />
             ) : (
               <LightMode sx={{ color: dark, fontSize: '25px' }} />
             )}
-          </IconButton> */}
+          </IconButton>
         </Box>
       ) : (
         <IconButton
@@ -179,7 +180,9 @@ const Navbar = () => {
             p='1rem'
           >
             <IconButton
-              onClick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}
+              onClick={() =>
+                setIsMobileMenuToggled(!isMobileMenuToggled)
+              }
             >
               <Close />
             </IconButton>

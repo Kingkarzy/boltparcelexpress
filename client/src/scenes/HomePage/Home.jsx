@@ -1,24 +1,35 @@
 import { Box, Card, IconButton } from '@mui/material';
 import $ from 'jquery';
 import LanguageIcon from '@mui/icons-material/Language';
+import { useParams } from 'react-router-dom';
 import PersonIcon from '@mui/icons-material/Person';
 import { useState, useEffect } from 'react';
 // import Package from '../../../../server/models/Package';
 
 const Home = () => {
   const [packageDetails, setPackageDetails] = useState(null);
-  const handleSubmit = async (event) => {
-    const response = await fetch(`http://localhost:5001/user/:packageId"`, {
+  const { packageId } = useParams();
+
+  const handleSubmit = async (values) => {
+    console.log(values);
+    const response = await fetch(`http://localhost:5001/users/${packageId}`, {
       method: 'GET',
-      headers: { Authorization: `Bearer ` },
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(values),
     });
-    const data = await response.json;
+    console.log(values);
+    const data = await response.json();
     setPackageDetails(data);
   };
+  /*   const handleSubmit = async (values) => {
+    await getPackageDetails(values);
+  }; */
 
-  useEffect(() => {
-    handleSubmit();
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  /*   useEffect(() => {
+    getPackageDetails();
+  }, []); */ // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <Box>
@@ -45,24 +56,24 @@ const Home = () => {
                 {/* FORM  */}
                 <form
                   onSubmit={handleSubmit}
-                  method='post'
                   className=''
                 >
                   <input
                     aria-label='.'
                     type='text'
-                    name='track_no'
-                    id='track_no'
+                    name={packageId}
+                    id={packageId}
+                    value={packageId}
                     className='form-control mb-3'
                     style={{ borderWidth: '3px', width: '100%' }}
                   />
-                  <input
+                  <button
                     type='submit'
                     className='btn btn-success btn-lg'
                     id='submit'
-                    name='submit'
-                    value='Track'
-                  />
+                  >
+                    Submit
+                  </button>
                 </form>
                 <div>
                   {packageDetails && (
