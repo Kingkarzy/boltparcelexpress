@@ -4,8 +4,9 @@ import Package from '../models/Package.js';
 
 export const getTrackId = async (req, res) => {
     try {
-        const { packageId } = req.params['packageId']; //get the packgeid from the url
-        const myParcel = await Package.find({ packageId: packageId}); //go the models and check the Package for packageId
+        const  packageID = req.params['packageId']; //get the packgeid from the url
+        const myParcel = await Package.find({packageId: packageID }); // packageId: packageID  go the models and check the Package for packageId
+        console.log('myParcel');
         res.status(200).json(myParcel);
     } catch (error) {
         res.status(404).json(`page not found, ${error.message}`);

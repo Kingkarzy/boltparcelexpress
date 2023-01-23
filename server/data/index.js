@@ -13,10 +13,32 @@ export const admin = [
 ];
 
 export const packages = [
+  // {
+  //   _id: new mongoose.Types.ObjectId(),
+  //   packageId: "123456789",
+  //   packageName: "NOthing but rose",
+  //   packageType: "frigile", 
+  //   packageWeight: "20kg",
+  //   senderFirstName: "fakesender",
+  //   senderLastName: "mia",
+  //   recieverFirstName:"Steve",
+  //   recieverLastName: "Ralph",
+  //   recieverEmail: "receiver@gmail.com",
+  //   recieverPhone: 789848849,
+  //   currentStatus: "ON ROUTE LA", 
+  //   currentLocation: "ON THE MOVE",
+  //   time: "12:23", 
+  //   date: "12-12-2022",
+  //   pieces: 12,
+  //   origin:"us",
+  //   destination: "netherland",
+  //   startDate: "2015-02-12",
+  //   locationName: ["California, USA", "GHANA"],
+  // },
   {
     _id: new mongoose.Types.ObjectId(),
-    packageId: "123456789",
-    packageName: "NOthing but rose",
+    packageId: "1234567",
+    packageName: "BLACK BOX",
     packageType: "frigile", 
     packageWeight: "20kg",
     senderFirstName: "fakesender",
@@ -36,6 +58,7 @@ export const packages = [
     locationName: ["California, USA", "GHANA"],
   },
 ];
+
 
 export const location = [
   {

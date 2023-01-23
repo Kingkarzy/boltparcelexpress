@@ -22,6 +22,7 @@ import './styles/style.css';
 import './styles/table.css';
 import Footer from 'components/Footer';
 
+
 function App() {
   const mode = useSelector((state) => state.mode);
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);

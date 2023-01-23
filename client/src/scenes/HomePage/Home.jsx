@@ -2,6 +2,7 @@ import { Box, Card, IconButton } from '@mui/material';
 import $ from 'jquery';
 import LanguageIcon from '@mui/icons-material/Language';
 import PersonIcon from '@mui/icons-material/Person';
+import Form from './Form.jsx';
 
 const Home = () => {
   return (
@@ -24,27 +25,8 @@ const Home = () => {
                 className='input-group-lg'
               >
                 {/* FORM  */}
-                <form
-                  action='includes/action_page.php'
-                  method='post'
-                  className=''
-                >
-                  <input
-                    aria-label='.'
-                    type='text'
-                    name='track_no'
-                    id='track_no'
-                    className='form-control mb-3'
-                    style={{ borderWidth: '3px', width: '100%' }}
-                  />
-                  <input
-                    type='submit'
-                    className='btn btn-success btn-lg'
-                    id='submit'
-                    name='submit'
-                    value='Track'
-                  />
-                </form>
+                <Form />
+                
               </div>
             </div>
           </div>
