@@ -1,5 +1,6 @@
 import Location from '../models/Location.js';
-import Admin from '../models/Admin';
+import Admin from '../models/Admin.js';
+import Package from '../models/Package.js';
 
 const date = new Date();
 const format = {
@@ -123,14 +124,14 @@ export const registerLocation = async (req, res) => {
 
 /** DELETE A PACAKGE  */
 
-export const updatePackage = async (req, res) => {
-    try{
-        const {id } = req.params;
-        const { userId } = req.body;
-        const post = await Package.findById(id);
-        const package  = post.
-    }
-}
+// export const updatePackage = async (req, res) => {
+//     try{
+//         const {id } = req.params;
+//         const { userId } = req.body;
+//         const post = await Package.findById(id);
+//         const package  = post.
+//     }
+// }
 
 
 /** UPDATE A PACKEGE */
