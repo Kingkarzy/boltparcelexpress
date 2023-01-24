@@ -1,27 +1,54 @@
 import Location from '../models/Location.js';
-import Package from '../models/Package.js';
+import Admin from '../models/Admin';
 
 const date = new Date();
 const format = {
     dd: date.getDate(),
-   // mm: formatData(date.getMonth() + 1),
     yyyy: date.getFullYear(),
     HH:date.getHours(),
     hh: date.getHours(),
-    // MM: formatData(date.getMinutes()),
-    // SS: formatData(date.getSeconds()),
   };
 
+
+  /**  ADMIN LOG IN */
 export const getAdmin = async (req, res) => {
     try {
-        const { id } = req.params;  //get the id of user from the request 
-        const user = await User.findById(id); //find the user with the id using the models/user.js
-        res.status(200).json(user);
+        const { id } = req.params;  //get the id of admin from the request 
+        const admin = await Admin.findById(id); //find the admin with the id using the models/admin.js
+        console.log(admin);
+        res.status(200).json(admin);
     } catch (error) {
         res.status(404).json({message: error.message});
     }
 }
 
+/** REGISTER AN ADMIN*/
+
+export const registerAdmin = async (req, res) => {
+    try {
+        const {
+            firstName, 
+            lastName, 
+            email, 
+            password
+        }=req.body;
+        const salt = await bcrypt.genSalt(password);
+        const passwordHash = await bcrypt.hash(password, salt);
+
+        const newAdmin = new Admin({
+            firstName, 
+            lastName, 
+            email, 
+            password:passwordHash
+        });
+        const savedAdmin = await newAdmin.save();
+        res.status(201).json(savedAdmin);
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
+}
+
+/** REGISTER A NEW PACKAGE */
 export const registerPackage = async (req, res) => {
     try{
          const {
@@ -75,6 +102,8 @@ export const registerPackage = async (req, res) => {
 }
 
 
+/** REGISTER A NEW LOCATION  */
+
 export const registerLocation = async (req, res) => {
     try{
          const {
@@ -90,3 +119,18 @@ export const registerLocation = async (req, res) => {
         res.status(500).json({error: error.message}); 
     }
 }
+
+
+/** DELETE A PACAKGE  */
+
+export const updatePackage = async (req, res) => {
+    try{
+        const {id } = req.params;
+        const { userId } = req.body;
+        const post = await Package.findById(id);
+        const package  = post.
+    }
+}
+
+
+/** UPDATE A PACKEGE */

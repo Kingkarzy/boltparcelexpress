@@ -25,10 +25,10 @@ export const packages = [
   //   recieverLastName: "Ralph",
   //   recieverEmail: "receiver@gmail.com",
   //   recieverPhone: 789848849,
-  //   currentStatus: "ON ROUTE LA", 
-  //   currentLocation: "ON THE MOVE",
-  //   time: "12:23", 
-  //   date: "12-12-2022",
+  //   currentStatus: ["ON ROUTE LA"], 
+  //   currentLocation: ["ON THE MOVE"],
+  //   time: ["12:23"], 
+  //   date: ["12-12-2022"],
   //   pieces: 12,
   //   origin:"us",
   //   destination: "netherland",
@@ -47,10 +47,10 @@ export const packages = [
     recieverLastName: "Ralph",
     recieverEmail: "receiver@gmail.com",
     recieverPhone: 789848849,
-    currentStatus: "ON ROUTE LA", 
-    currentLocation: "ON THE MOVE",
-    time: "12:23", 
-    date: "12-12-2022",
+    currentStatus: ["ON ROUTE LA"], 
+    currentLocation: ["ON THE MOVE"],
+    time: ["12:23"], 
+    date: ["12-12-2022"],
     pieces: 12,
     origin:"us",
     destination: "netherland",
@@ -63,7 +63,7 @@ export const packages = [
 export const location = [
   {
     _id: new mongoose.Types.ObjectId(),
-    locationName: "California, USA",
+    locationName: ["California, USA"],
   },
 ];
 
