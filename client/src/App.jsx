@@ -1,5 +1,9 @@
-import { BrowserRouter, Navigate, Routes, Route } from 'react-router-dom';
-import HomePage from 'scenes/HomePage/HomePage';
+import {
+  BrowserRouter,
+  Navigate,
+  Routes,
+  Route,
+} from 'react-router-dom';
 import LoginPage from 'scenes/LoginPage/LoginPage';
 import About from 'scenes/About/About';
 import Contact from 'scenes/Contact/Contact';
@@ -22,10 +26,12 @@ import './styles/style.css';
 import './styles/table.css';
 import Footer from 'components/Footer';
 
-
 function App() {
   const mode = useSelector((state) => state.mode);
-  const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
+  const theme = useMemo(
+    () => createTheme(themeSettings(mode)),
+    [mode]
+  );
   const isAuth = Boolean(useSelector((state) => state.token));
 
   return (
@@ -61,7 +67,8 @@ function App() {
             />
             <Route
               path='/admin-Dashboard'
-              element={isAuth ? <AdminPage /> : <Navigate to='/' />}
+              // element={isAuth ? <AdminPage /> : <Navigate to='/' />}
+              element={<AdminPage />}
             />
           </Routes>
           <Footer />

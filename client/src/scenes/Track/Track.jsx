@@ -1,32 +1,27 @@
+import { Box, Typography } from '@mui/material';
 import React from 'react';
+import Form from 'scenes/HomePage/Form';
+
 const Track = () => {
+  // const result = location.state.result;
   return (
-    <section className='gallery py-md-5'>
-      <div className='container'>
-        <div>
-          <label>Enter your tracking number</label>
-          <form
-            action='#'
-            method='GET'
-            data-track-and-trace-form='utapi'
-            autosubmit='true'
-          >
-            <div>
-              <div>
-                <input
-                  id='tracking-input'
-                  type='input'
-                  name='tracking-id'
-                />
-                <label>up to 10 codes</label>
-                <button type='submit'>Track</button>
-              </div>
-            </div>
-            <p>Please enter your tracking number(s)</p>
-          </form>
-        </div>
-      </div>
-    </section>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        // justifyContent: 'center',
+        width: '100vw',
+        alignItems: 'center',
+      }}
+    >
+      <Typography
+        variant='h1'
+        sx={{ m: '2rem, 0, 0' }}
+      >
+        TRACK YOUR PARCEL
+      </Typography>
+      <Form />
+    </Box>
   );
 };
 
