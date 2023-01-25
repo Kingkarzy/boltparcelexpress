@@ -13,11 +13,14 @@ import {
   Grid,
 } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+// import { styled } from '@mui/system';
 import axios from 'axios';
 import React from 'react';
 import { useState } from 'react';
-import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
-import { styled } from '@material-ui/core/styles';
+import LinearProgress, {
+  linearProgressClasses,
+} from '@mui/material/LinearProgress';
+import { styled } from '@mui/system';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -66,9 +69,28 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: '#CCAF2D !important',
     },
   },
+  '& label.Mui-focused': {
+    color: '#28a745',
+  },
+  '& .MuiOutlinedInput-root': {
+    '&.Mui-focused fieldset': {
+      borderColor: '#28a745',
+    },
+  },
 }));
 
-function Form() {
+const CssTextField = styled(TextField)({
+  '& label.Mui-focused': {
+    color: '#28a745',
+  },
+  '& .MuiOutlinedInput-root': {
+    '&.Mui-focused fieldset': {
+      borderColor: '#28a745',
+    },
+  },
+});
+
+const Form = () => {
   const classes = useStyles();
   const theme = useTheme();
   const [packageId, setPackageId] = useState(
@@ -79,19 +101,18 @@ function Form() {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-
   function handleSubmit(e) {
     e.preventDefault();
     localStorage.setItem('packageId', packageId);
     axios
-      .get(`http://localhost:5000/users/${packageId}`)
+      .get(`http://localhost:5001/users/${packageId}`)
       .then((response) => {
         setResult(response.data);
       })
       .catch((error) => console.log(error));
     // navigate(`/track/${packageId}`, { state: { result } });
     handleOpen();
-    setPackageId("");
+    setPackageId('');
   }
 
   return (
@@ -121,7 +142,7 @@ function Form() {
         onSubmit={handleSubmit}
         className={classes.form}
       >
-        <TextField
+        <CssTextField
           id='track_no'
           label='Enter Tracking Number'
           value={packageId}
@@ -165,9 +186,7 @@ function Form() {
                       item
                       xs={12}
                     >
-                      <Typography
-                       className={classes.packageNumber}
-                       >
+                      <Typography className={classes.packageNumber}>
                         Tracking Code: {item.packageId}
                       </Typography>
                     </Grid>
@@ -189,9 +208,7 @@ function Form() {
                       item
                       xs={4}
                     >
-                      <Typography>
-                        Origin: {item.origin}
-                      </Typography>
+                      <Typography>Origin: {item.origin}</Typography>
                     </Grid>
                     <Grid
                       item
@@ -201,7 +218,7 @@ function Form() {
                         Package: {item.packageName}
                       </Typography>
                     </Grid>
-                                    
+
                     <Grid
                       item
                       xs={4}
@@ -218,7 +235,7 @@ function Form() {
                       <Typography>
                         Destination: {item.destination}
                       </Typography>
-                    </Grid> 
+                    </Grid>
                     <Grid
                       item
                       xs={4}
@@ -228,39 +245,32 @@ function Form() {
                       </Typography>
                     </Grid>
                   </Grid>
-                  <br/>
+                  <br />
 
-                  <Box 
+                  <Box
                     sx={{
-                      width:"100%", 
-                      placeItems: 'center center', 
-                      display: 'flex'
-                      }} 
+                      width: '100%',
+                      placeItems: 'center center',
+                      display: 'flex',
+                    }}
                   >
-                  <Typography
-                    sx={{ fontWeight: 'bold' }}
-                  >
-                        Origin
-                  </Typography>
-                    <LinearProgress 
-                      variant="determinate"  
-                      value={(item.currentStatus.length) * 10 }
-                      color='success' 
-                      sx={{width:"80%", margin:'auto'}} 
+                    <Typography sx={{ fontWeight: 'bold' }}>
+                      Origin
+                    </Typography>
+                    <LinearProgress
+                      variant='determinate'
+                      value={item.currentStatus.length * 10}
+                      color='success'
+                      sx={{ width: '80%', margin: 'auto' }}
                     />
-                    <Typography
-                      sx={{ fontWeight: 'bold' }}
-                    >
-                        Destination
-                  </Typography>
-                    </Box>
-                
-                  {/* STATUS UPDATE   */}
-                    {item.currentStatus.map((status, index) => (
+                    <Typography sx={{ fontWeight: 'bold' }}>
+                      Destination
+                    </Typography>
+                  </Box>
 
-                    <div
-                      key={index}
-                    >
+                  {/* STATUS UPDATE   */}
+                  {item.currentStatus.map((status, index) => (
+                    <div key={index}>
                       <CardContent>
                         <Grid
                           container
@@ -269,9 +279,9 @@ function Form() {
                           <Grid
                             item
                             xs={12}
-                          > 
-                          <Divider/>
-                          <Typography
+                          >
+                            <Divider />
+                            <Typography
                               variant='h3'
                               className={classes.packageStatus}
                               mt={1}
@@ -279,33 +289,33 @@ function Form() {
                               {status}
                             </Typography>
                           </Grid>
-                            <Grid
-                              item
-                              xs={4}
-                            >
-                            <Typography>{item.currentLocation[index]}</Typography>
-                            </Grid>
-                            <Grid
-                              item
-                              xs={4}
-                            >
-                              <Typography>
-                                {item.date[index]}
-                              </Typography>
-                            </Grid>
-                            <Grid
-                              item
-                              xs={4}
-                            >
-                              <Typography>
-                                {item.pieces}
-                              </Typography>
-                            </Grid>
-                            <br/>
-                      </Grid>
+                          <Grid
+                            item
+                            xs={4}
+                          >
+                            <Typography>
+                              {item.currentLocation[index]}
+                            </Typography>
+                          </Grid>
+                          <Grid
+                            item
+                            xs={4}
+                          >
+                            <Typography>
+                              {item.date[index]}
+                            </Typography>
+                          </Grid>
+                          <Grid
+                            item
+                            xs={4}
+                          >
+                            <Typography>{item.pieces}</Typography>
+                          </Grid>
+                          <br />
+                        </Grid>
                       </CardContent>
-                      </div>
-                    ))}
+                    </div>
+                  ))}
                 </CardContent>
               </ListItem>
             ))}
@@ -350,6 +360,6 @@ function Form() {
       )}
     </Box>
   );
-}
+};
 
 export default Form;

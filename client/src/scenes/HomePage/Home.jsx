@@ -1,4 +1,10 @@
-import { Box, Card, IconButton, Button, Typography } from '@mui/material';
+import {
+  Box,
+  Card,
+  IconButton,
+  Button,
+  Typography,
+} from '@mui/material';
 import $ from 'jquery';
 import { useState } from 'react';
 import LanguageIcon from '@mui/icons-material/Language';
@@ -143,8 +149,8 @@ const Home = () => {
                 <h3 className='mt-3'>Can We Help?</h3>
                 <p className='mt-3 mb-1'>
                   Having trouble arranging a shipment online or
-                  tracking a package? Our Customer Service
-                  agents are here to help you!
+                  tracking a package? Our Customer Service agents are
+                  here to help you!
                 </p>
                 <div>
                   <a href='mailto:info@boltparcelexpress.com'>
@@ -172,7 +178,7 @@ const Home = () => {
                   <h3 className='text-center'>Contact </h3>
                   <p
                     className='text-center'
-                    style={{ color: 'grey' }}
+                    // style={{ color: 'grey' }}
                   >
                     Email Customer Service
                   </p>
@@ -224,12 +230,16 @@ const Home = () => {
                   Specialtymoves? We’re a company up to the challenge!
                 </h4>
                 <p className='mb-3'>
-                Welcome to Bolt Parcel Express! 
-                We are a parcel delivery service that specializes in fast and reliable shipping for both individuals and businesses. 
-                With our easy-to-use online platform, you can track your packages, schedule pickups, and even get shipping rates in just a few clicks. 
-                Whether you're sending a gift to a loved one or shipping products for your business, we've got you covered.
+                  Welcome to Bolt Parcel Express! We are a parcel
+                  delivery service that specializes in fast and
+                  reliable shipping for both individuals and
+                  businesses. With our easy-to-use online platform,
+                  you can track your packages, schedule pickups, and
+                  even get shipping rates in just a few clicks.
+                  Whether you're sending a gift to a loved one or
+                  shipping products for your business, we've got you
+                  covered.
                 </p>
-              
               </div>
 
               <div className='col-md-6 banner_bottom_grid help'>
@@ -244,25 +254,29 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='testimonials py-md-5'>
-        <div className='container py-4 mt-2'>
+      <section
+        className='testimonials py-md-5'
+        style={{ marginTop: '2rem' }}
+      >
+        <div className='container mt-2'>
           <h3 className='tittle-w3ls text-center mb-3 text-white'>
             Express Delivery Services & International Shipping
           </h3>
           <p className='tit text-center mx-auto text-white'>
-          Our platform is designed to make 
-          the shipping process as simple and hassle-free as possible. 
-          Our user-friendly interface allows you to create shipping labels and 
-          track your packages with just a few clicks. We also offer a variety of
-           shipping options to suit your needs, including express shipping for 
-           time-sensitive packages, ground shipping for larger items, 
-           and international shipping to over 200 countries and territories.
+            Our platform is designed to make the shipping process as
+            simple and hassle-free as possible. Our user-friendly
+            interface allows you to create shipping labels and track
+            your packages with just a few clicks. We also offer a
+            variety of shipping options to suit your needs, including
+            express shipping for time-sensitive packages, ground
+            shipping for larger items, and international shipping to
+            over 200 countries and territories.
           </p>
         </div>
       </section>
-  
+
       <section className='distance-w3 py-md-5'>
-        <div className='container py-4 mt-2'>
+        <div className='container mt-2'>
           <div className='row'>
             <div className='col-md-8 distance-agile-left'>
               <h4 className='mt-2'>
@@ -270,13 +284,19 @@ const Home = () => {
               </h4>
             </div>
             <div className='col-md-4 distance-agile-right'>
-              <a href='mailto:info@boltparcelexpress.com'> Contact Us </a>
+              <a href='mailto:info@boltparcelexpress.com'>
+                {' '}
+                Contact Us{' '}
+              </a>
             </div>
           </div>
         </div>
       </section>
-      <section className='stats py-md-5'>
-        <div className='container py-4 mt-2'>
+      <section
+        className='stats py-md-5'
+        style={{ marginTop: '2rem' }}
+      >
+        <div className='container mt-2'>
           <h3 className='tittle-w3ls text-center mb-3 '>Our Stats</h3>
           <p className='tit text-center mx-auto'>
             United States air hubs: Dallas, TX.; Louisville, KY.
@@ -285,7 +305,7 @@ const Home = () => {
             Hamilton, Ontario, Canada; Hong Kong SAR, China; Shanghai,
             China; Shenzhen, China
           </p>
-          <div className='row inner_w3l_agile_grids-1 pt-4 mt-md-4'>
+          <div className='row inner_w3l_agile_grids-1 mt-md-4'>
             <div className='col-sm-4 w3layouts_stats_left w3_counter_grid'>
               <p className='counter'>1,546</p>
               <h3>Satisfied Clients</h3>
