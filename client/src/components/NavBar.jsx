@@ -39,7 +39,7 @@ const Navbar = () => {
         alignItems: 'center',
         position: 'fixed',
         width: '100%',
-        zIndex: '1',
+        zIndex: '99',
         boxShadow:
           '0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%)',
       }}
@@ -57,16 +57,16 @@ const Navbar = () => {
         <Typography
           fontWeight='bold'
           fontSize='clamp(1rem, 2rem, 2.25rem)'
-          color='#CCAF2D'
+          color='#28a745'
           onClick={() => navigate('/')}
           sx={{
             '&:hover': {
-              color: '#28a745',
+              color: '#CCAF2D',
               cursor: 'pointer',
             },
           }}
         >
-          Bolt Parcel
+          Bolt Parcel Express
         </Typography>
       </Box>
 
@@ -86,7 +86,7 @@ const Navbar = () => {
             onClick={() => navigate('/')}
             sx={{
               '&:hover': {
-                color: '#00D5FA',
+                color: '#28a745',
                 cursor: 'pointer',
               },
             }}
@@ -99,7 +99,7 @@ const Navbar = () => {
             onClick={() => navigate('/about')}
             sx={{
               '&:hover': {
-                color: '#00D5FA',
+                color: '#28a745',
                 cursor: 'pointer',
               },
             }}
@@ -112,7 +112,7 @@ const Navbar = () => {
             onClick={() => navigate('/contact')}
             sx={{
               '&:hover': {
-                color: '#00D5FA',
+                color: '#28a745',
                 cursor: 'pointer',
               },
             }}
@@ -125,7 +125,7 @@ const Navbar = () => {
             onClick={() => navigate('/services')}
             sx={{
               '&:hover': {
-                color: '#00D5FA',
+                color: '#28a745',
                 cursor: 'pointer',
               },
             }}
@@ -138,7 +138,7 @@ const Navbar = () => {
             onClick={() => navigate('/track')}
             sx={{
               '&:hover': {
-                color: '#00D5FA',
+                color: '#28a745',
                 cursor: 'pointer',
               },
             }}
@@ -207,7 +207,7 @@ const Navbar = () => {
               onClick={() => navigate('/')}
               sx={{
                 '&:hover': {
-                  color: '#00D5FA',
+                  color: '#28a745',
                   cursor: 'pointer',
                 },
               }}
@@ -220,7 +220,7 @@ const Navbar = () => {
               onClick={() => navigate('/about')}
               sx={{
                 '&:hover': {
-                  color: '#00D5FA',
+                  color: '#28a745',
                   cursor: 'pointer',
                 },
               }}
@@ -233,7 +233,7 @@ const Navbar = () => {
               onClick={() => navigate('/contact')}
               sx={{
                 '&:hover': {
-                  color: '#00D5FA',
+                  color: '#28a745',
                   cursor: 'pointer',
                 },
               }}
@@ -246,7 +246,7 @@ const Navbar = () => {
               onClick={() => navigate('/services')}
               sx={{
                 '&:hover': {
-                  color: '#00D5FA',
+                  color: '#28a745',
                   cursor: 'pointer',
                 },
               }}
@@ -259,7 +259,7 @@ const Navbar = () => {
               onClick={() => navigate('/track')}
               sx={{
                 '&:hover': {
-                  color: '#00D5FA',
+                  color: '#28a745',
                   cursor: 'pointer',
                 },
               }}

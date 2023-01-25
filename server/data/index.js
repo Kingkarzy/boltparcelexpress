@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 
 const adminIds =  new mongoose.Types.ObjectId();
 
+
 export const admin = [
   {
     _id: adminIds,
@@ -47,10 +48,10 @@ export const packages = [
     recieverLastName: "Ralph",
     recieverEmail: "receiver@gmail.com",
     recieverPhone: 789848849,
-    currentStatus: ["ON ROUTE LA"], 
-    currentLocation: ["ON THE MOVE"],
-    time: ["12:23"], 
-    date: ["12-12-2022"],
+    currentStatus: ["ON ROUTE LA", "update my guy"], 
+    currentLocation: ["ON THE MOVE", "on route"],
+    time: ["12:23", "07:56"], 
+    date: ["12-12-2022", "13-01-2023"],
     pieces: 12,
     origin:"us",
     destination: "netherland",

@@ -160,9 +160,9 @@ const Footer = () => {
                   <div className='address-right'>
                     <h6>Email Address</h6>
                     <p>
-                      <a href='mailto:info@upcxpress.com'>
+                      <a href='mailto:info@upcxpress.com' >
                         {' '}
-                        info@upcxpress.com{' '}
+                        info@boltparcelexpress.com{' '}
                       </a>
                     </p>
                   </div>
@@ -188,10 +188,10 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          {/* </br>
-		</br> */}
+           <br/>
+            <br/>
           <div style={{ textAlign: 'center', color: 'grey' }}>
-            Copyright&copy; 2020 UPC Express, Inc. All rights reserved
+            Copyright&copy; 2023 UPC Express, Inc. All rights reserved
           </div>
         </div>
       </section>

@@ -1,4 +1,4 @@
-import { Box, Card, IconButton, Button } from '@mui/material';
+import { Box, Card, IconButton, Button, Typography } from '@mui/material';
 import $ from 'jquery';
 import { useState } from 'react';
 import LanguageIcon from '@mui/icons-material/Language';
@@ -44,7 +44,7 @@ const Home = () => {
           >
             <div className='banner-info info2'>
               <h3>
-                <b className='text-success'> BOLT FLASH EXPRESS </b>
+                <b className='text-success'> BOLT EXPRESS </b>
               </h3>
               <h2 style={{ color: 'white' }}>Track Package</h2>
 
@@ -115,8 +115,8 @@ const Home = () => {
                 <IconButton>
                   <LanguageIcon sx={{ fontSize: '4rem' }} />
                 </IconButton>
-                <h3 className='mt-3'>Express Shipping with UPC</h3>
-                <p className='mt-3 mb-3'>
+                <h3 className=' mt-3'>Express Shipping with Bolt</h3>
+                <p className='mt-3 mb-1'>
                   Get expert shipping advice and customs support to
                   prepare and manage your express shipments!
                 </p>
@@ -141,14 +141,14 @@ const Home = () => {
                   <PersonIcon sx={{ fontSize: '4rem' }} />
                 </IconButton>
                 <h3 className='mt-3'>Can We Help?</h3>
-                <p className='mt-3 mb-3'>
+                <p className='mt-3 mb-1'>
                   Having trouble arranging a shipment online or
-                  tracking a package? Our UPC Express Customer Service
+                  tracking a package? Our Customer Service
                   agents are here to help you!
                 </p>
                 <div>
-                  <a href='mailto:info@upcxpress.com'>
-                    UPC Express customer service
+                  <a href='mailto:info@boltparcelexpress.com'>
+                    Customer Service
                   </a>
                 </div>
               </Card>
@@ -216,7 +216,7 @@ const Home = () => {
         </div>
       </section>
       <section className='banner_bottom'>
-        <div className='container mt-2'>
+        <div className='container mt-1'>
           <div className='inner_sec_info_wthree_agile py-5'>
             <div className='row help_full py-sm-4'>
               <div className='col-md-6 pt-lg-5 mt-lg-5 banner_bottom_left'>
@@ -224,28 +224,12 @@ const Home = () => {
                   Specialtymoves? We’re a company up to the challenge!
                 </h4>
                 <p className='mb-3'>
-                  Get expert shipping/delivery advice and customs
-                  support to prepare and manage your express
-                  shipments! As an expert in international shipping
-                  and freight delivery, United Parcel Courier is a
-                  worldwide delivery express that understands the
-                  needs of small and medium businesses. United Parcel
-                  Courier is the largest consumer-to-consumer package
-                  transportation company from the United States to
-                  Europe. With over 60 years of experience handing
-                  ocean and air shipments, Sky Delivery and our
-                  operating companies have earned our reputation as a
-                  consistent, trusted, carrier that is relied upon to
-                  cost effectively handle shipments to 43 countries.
+                Welcome to Bolt Parcel Express! 
+                We are a parcel delivery service that specializes in fast and reliable shipping for both individuals and businesses. 
+                With our easy-to-use online platform, you can track your packages, schedule pickups, and even get shipping rates in just a few clicks. 
+                Whether you're sending a gift to a loved one or shipping products for your business, we've got you covered.
                 </p>
-                <p className='mb-3'>
-                  United Parcel Courier – you’re shipping with
-                  specialists in international shipping and courier
-                  delivery services! With our wide range of express
-                  parcel and package services, along with shipping and
-                  tracking solutions to fit your needs – learn how
-                  United Parcel Courier can deliver!
-                </p>
+              
               </div>
 
               <div className='col-md-6 banner_bottom_grid help'>
@@ -266,86 +250,17 @@ const Home = () => {
             Express Delivery Services & International Shipping
           </h3>
           <p className='tit text-center mx-auto text-white'>
-            When you ship with UPC Express – you’re shipping with
-            specialists in international shipping and courier delivery
-            services! With our wide range of express parcel and
-            package services, along with shipping and tracking
-            solutions to fit your needs – learn how UPC Express can
-            deliver!
+          Our platform is designed to make 
+          the shipping process as simple and hassle-free as possible. 
+          Our user-friendly interface allows you to create shipping labels and 
+          track your packages with just a few clicks. We also offer a variety of
+           shipping options to suit your needs, including express shipping for 
+           time-sensitive packages, ground shipping for larger items, 
+           and international shipping to over 200 countries and territories.
           </p>
         </div>
       </section>
-      <section className='wthree-row w3-about py-md-5'>
-        <div className='container py-4 mt-2'>
-          <h3 className='tittle-w3ls text-center mb-3'>
-            How UPC is responding to the Coronavirus
-          </h3>
-          <p className='tit text-center mx-auto'>
-            UPC continues to deliver worldwide. In the U.S., UPC is
-            designated among the government’s critical infrastructure
-            and, therefore, operations continue as normal. We also
-            continue to deliver to locations around the world, where
-            permitted. As always, our highest priority is to help
-            ensure the health and safety of our employees, customers,
-            and suppliers while meeting our service commitments.
-          </p>
-          <div className='card-deck pt-4 mt-md-4'>
-            <div className='card'>
-              <img
-                src='../assets/g1.jpg'
-                className='img-fluid'
-                alt='Card'
-              />
-              <div className='card-body w3ls-card'>
-                <h5 className='card-title'>
-                  Small and Medium Business Solutions
-                </h5>
-                <p className='card-text mb-3 '>
-                  As an expert in international shipping, UPC Express
-                  understands the needs of small and medium
-                  businesses.
-                </p>
-              </div>
-            </div>
-            <div className='card'>
-              <img
-                src='../assets/g2.jpg'
-                className='img-fluid'
-                alt='Card'
-              />
-              <div className='card-body w3ls-card'>
-                <h5 className='card-title'>
-                  How we’re responding to Coronavirus
-                </h5>
-                <p className='card-text mb-3 '>
-                  In the wake of the Coronavirus virus, our highest
-                  priority is to do our part the help ensure the
-                  health and safety of our employees, customers, and
-                  suppliers while meeting our service commitments.
-                </p>
-              </div>
-            </div>
-            <div className='card'>
-              <img
-                src='../assets/g3.jpg'
-                className='img-fluid'
-                alt='Card'
-              />
-              <div className='card-body w3ls-card'>
-                <h5 className='card-title'>
-                  UPC Integration Solutions
-                </h5>
-                <p className='card-text mb-3 '>
-                  Whether integrating our shipping functionalities
-                  into your applications or websites, we can help you
-                  streamline processes and gain efficiencies.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+  
       <section className='distance-w3 py-md-5'>
         <div className='container py-4 mt-2'>
           <div className='row'>
@@ -355,14 +270,14 @@ const Home = () => {
               </h4>
             </div>
             <div className='col-md-4 distance-agile-right'>
-              <a href='mailto:info@upcxpress.com'> Contact Us </a>
+              <a href='mailto:info@boltparcelexpress.com'> Contact Us </a>
             </div>
           </div>
         </div>
       </section>
       <section className='stats py-md-5'>
         <div className='container py-4 mt-2'>
-          <h3 className='tittle-w3ls text-center mb-3'>Our Stats</h3>
+          <h3 className='tittle-w3ls text-center mb-3 '>Our Stats</h3>
           <p className='tit text-center mx-auto'>
             United States air hubs: Dallas, TX.; Louisville, KY.
             (Worldport); Ontario, CA.; Philadelphia, PA.; Rockford,
@@ -390,59 +305,6 @@ const Home = () => {
         </div>
       </section>
 
-      <div
-        className='modal fade'
-        id='myModal'
-        tabIndex='-1'
-        role='dialog'
-        aria-labelledby='exampleModalCenterTitle'
-        aria-hidden='true'
-      >
-        <div
-          className='modal-dialog modal-dialog-centered'
-          role='document'
-        >
-          <div className='modal-content'>
-            <div className='modal-header'>
-              <h4 className='modal-title'>Shipping</h4>
-              <button
-                type='button'
-                className='close'
-                data-dismiss='modal'
-                aria-label='Close'
-              >
-                <span aria-hidden='true'>&times;</span>
-              </button>
-            </div>
-            <div className='modal-body'>
-              <div className='agileits-w3layouts-info'>
-                <img
-                  src='../assets/g1.jpg'
-                  className='img-fluid'
-                  alt=''
-                />
-                <p>
-                  When you ship with UPC Express – you’re shipping
-                  with specialists in international shipping and
-                  courier delivery services! With our wide range of
-                  express parcel and package services, along with
-                  shipping and tracking solutions to fit your needs –
-                  learn how UPC Express can deliver!{' '}
-                </p>
-              </div>
-            </div>
-            <div className='modal-footer'>
-              <button
-                type='button'
-                className='btn btn-secondary'
-                data-dismiss='modal'
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
       <script src='../../js/jquery-2.2.3.min.js'></script>
       <script src='../../js/move-top.js'></script>
       <script src='../../js/easing.js'></script>

@@ -16,6 +16,8 @@ import { makeStyles } from '@mui/styles';
 import axios from 'axios';
 import React from 'react';
 import { useState } from 'react';
+import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
+import { styled } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -77,17 +79,19 @@ function Form() {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+
   function handleSubmit(e) {
     e.preventDefault();
     localStorage.setItem('packageId', packageId);
     axios
-      .get(`http://localhost:5001/users/${packageId}`)
+      .get(`http://localhost:5000/users/${packageId}`)
       .then((response) => {
         setResult(response.data);
       })
       .catch((error) => console.log(error));
     // navigate(`/track/${packageId}`, { state: { result } });
     handleOpen();
+    setPackageId("");
   }
 
   return (
@@ -98,12 +102,13 @@ function Form() {
         justifyContent: 'center',
         mb: '5rem',
         mt: '2rem',
+        placeItems: 'center center',
       }}
     >
       <Typography
         variant='subtitle1'
         sx={{
-          m: '1rem !important',
+          m: '3rem !important',
           position: 'relative',
           textAlign: 'center',
         }}
@@ -111,6 +116,7 @@ function Form() {
         NOTE: Please enter your tracking number in the box provided
         below
       </Typography>
+
       <form
         onSubmit={handleSubmit}
         className={classes.form}
@@ -136,8 +142,8 @@ function Form() {
       {Object.keys(result).length !== 0 && (
         <Card
           style={{
-            width: '75vw',
-            height: '300px',
+            width: '90%',
+            height: '100%',
             // backgroundColor: 'rgba(255,250,245,0.5)',
             display: 'flex',
             // justifyContent: 'center',
@@ -159,72 +165,147 @@ function Form() {
                       item
                       xs={12}
                     >
-                      <Typography className={classes.packageNumber}>
+                      <Typography
+                       className={classes.packageNumber}
+                       >
                         Tracking Code: {item.packageId}
                       </Typography>
                     </Grid>
                     <Grid
                       item
-                      xs={6}
+                      xs={4}
                     >
                       <Typography
                         sx={{ maxWidth: '100%', display: 'flex' }}
                       >
                         <Typography sx={{ fontWeight: 'bold' }}>
-                          Package For:{' '}
+                          Package For: &nbsp;
                         </Typography>
                         {item.recieverFirstName}{' '}
                         {item.recieverLastName}
                       </Typography>
                     </Grid>
-                    <Divider />
                     <Grid
                       item
-                      xs={12}
-                    >
-                      <Typography
-                        variant='h2'
-                        className={classes.packageStatus}
-                      >
-                        {item.currentStatus}
-                      </Typography>
-                    </Grid>
-                    <Grid
-                      item
-                      xs={3}
-                    >
-                      <Typography>{item.origin}</Typography>
-                    </Grid>
-                    <Grid
-                      item
-                      xs={3}
-                    >
-                      <Typography>{item.currentLocation}</Typography>
-                    </Grid>
-                    <Grid
-                      item
-                      xs={3}
-                    >
-                      <Typography>{item.destination}</Typography>
-                    </Grid>
-                    <Grid
-                      item
-                      xs={3}
+                      xs={4}
                     >
                       <Typography>
-                        {item.time} {item.date}
+                        Origin: {item.origin}
                       </Typography>
                     </Grid>
                     <Grid
                       item
-                      xs={12}
+                      xs={4}
+                    >
+                      <Typography>
+                        Package: {item.packageName}
+                      </Typography>
+                    </Grid>
+                                    
+                    <Grid
+                      item
+                      xs={4}
                     >
                       <Typography>
                         Sender: {item.senderFirstName}{' '}
                         {item.senderLastName}
                       </Typography>
                     </Grid>
+                    <Grid
+                      item
+                      xs={4}
+                    >
+                      <Typography>
+                        Destination: {item.destination}
+                      </Typography>
+                    </Grid> 
+                    <Grid
+                      item
+                      xs={4}
+                    >
+                      <Typography>
+                        Weight: {item.packageWeight}
+                      </Typography>
+                    </Grid>
                   </Grid>
+                  <br/>
+
+                  <Box 
+                    sx={{
+                      width:"100%", 
+                      placeItems: 'center center', 
+                      display: 'flex'
+                      }} 
+                  >
+                  <Typography
+                    sx={{ fontWeight: 'bold' }}
+                  >
+                        Origin
+                  </Typography>
+                    <LinearProgress 
+                      variant="determinate"  
+                      value={(item.currentStatus.length) * 10 }
+                      color='success' 
+                      sx={{width:"80%", margin:'auto'}} 
+                    />
+                    <Typography
+                      sx={{ fontWeight: 'bold' }}
+                    >
+                        Destination
+                  </Typography>
+                    </Box>
+                
+                  {/* STATUS UPDATE   */}
+                    {item.currentStatus.map((status, index) => (
+
+                    <div
+                      key={index}
+                    >
+                      <CardContent>
+                        <Grid
+                          container
+                          spacing={1}
+                        >
+                          <Grid
+                            item
+                            xs={12}
+                          > 
+                          <Divider/>
+                          <Typography
+                              variant='h3'
+                              className={classes.packageStatus}
+                              mt={1}
+                            >
+                              {status}
+                            </Typography>
+                          </Grid>
+                            <Grid
+                              item
+                              xs={4}
+                            >
+                            <Typography>{item.currentLocation[index]}</Typography>
+                            </Grid>
+                            <Grid
+                              item
+                              xs={4}
+                            >
+                              <Typography>
+                                {item.date[index]}
+                              </Typography>
+                            </Grid>
+                            <Grid
+                              item
+                              xs={4}
+                            >
+                              <Typography>
+                                {item.pieces}
+                              </Typography>
+                            </Grid>
+                            <br/>
+                      </Grid>
+                      </CardContent>
+                      </div>
+                    ))}
                 </CardContent>
               </ListItem>
             ))}

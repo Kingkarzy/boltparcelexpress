@@ -36,49 +36,40 @@ const Contact = () => {
               </div>
             </div>
             <div className='col-md-6 w3layouts-reg-form contact-form-row-agileinfo'>
-              <h4 className='form-con-txt'>send us a mail</h4>
+              <h4 className='form-con-txt text-center mb-2'>Contact Us</h4>
               <form
-                action='#'
-                method='post'
-                className='banner_form contact-inner-form'
-              >
-                <div className='contact-form-left contact-field1'>
+                  action='#'
+                  method='post'
+                  className='banner_form '
+                >
                   <div className='sec-left'>
-                    <label className='contact-form-text'>Name</label>
+                    <label className='contact-form-text'>
+                      Email Address
+                    </label>
                     <input
-                      placeholder='your name '
-                      name='first name'
-                      type='text'
-                      required=''
-                    />
-                  </div>
-                  <div className='sec-right'>
-                    <label className='contact-form-text'>Email</label>
-                    <input
-                      placeholder='xxx@xx.com '
-                      name='first name'
+                      placeholder='Email Address '
+                      name='email'
                       type='email'
                       required=''
                     />
                   </div>
-                </div>
-                <div className='contact-form-right contact-field2'>
+                  <div className='sec-right'>
+                    <label className='contact-form-text'>
+                      Message
+                    </label>
+                    <textarea
+                      className='form-control'
+                      name='message'
+                      id='exampleFormControlTextarea1'
+                      rows='3'
+                      placeholder='Message'
+                    ></textarea>
+                  </div>
                   <input
                     type='submit'
-                    value='send message'
+                    value='Send Message'
                   />
-                </div>
-                <div className='clearfix'></div>
-                <div className='form-tx contact-field3'>
-                  <label className='contact-form-text'>Message</label>
-                  <textarea
-                    className='form-control'
-                    name='message'
-                    rows='3'
-                    placeholder='Message'
-                  ></textarea>
-                </div>
-              </form>
+                </form>
             </div>
           </div>
         </div>

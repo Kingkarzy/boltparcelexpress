@@ -339,8 +339,12 @@ label.header span {
 .banner-btmg1 img {
   position: absolute;
   right: -30px;
-  width: 28%;
+  width: 20%;
   top: -1px;
+}
+.banner_bottom_grid img{
+  width: 60%;
+  margin-left: 3rem;
 }
 .form-text p {
   color: #fff;
@@ -683,7 +687,7 @@ ul.social-nav.model-3d-0.footer-social.social.two {
 }
 
 .address-right p a {
-  color: #ffdc39;
+  color: #28a745;
   text-decoration: none;
 }
 

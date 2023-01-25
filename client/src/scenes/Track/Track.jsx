@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import React from 'react';
-import Form from 'scenes/HomePage/Form';
+import Form from 'scenes/HomePage/Form.jsx';
 
 const Track = () => {
   // const result = location.state.result;
