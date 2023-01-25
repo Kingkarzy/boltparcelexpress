@@ -7,7 +7,7 @@ const Services = () => {
         <div className='container py-4 mt-2'>
           <h3 className='tittle-w3ls text-center mb-3'>Services</h3>
           <p className='tit text-center mx-auto'>
-            Services and technology for managing your shipping process – from
+            Services and technology for managing your shipping process {"-"} from
             individuals to enterprises, local to global.
           </p>
           <div className='row banner-bottom-main pt-4 mt-md-4'>
@@ -37,7 +37,7 @@ const Services = () => {
                   A logistics partner big enough to deliver freight of any kind,
                   to any place via air, ocean, road or rail, but capable of
                   giving its customers the personal attention they need. Welcome
-                  to United Parcel Courier.
+                  to Bolt Parcel Express.
                 </p>
                 <div className='read-btn'></div>
               </div>
@@ -67,7 +67,7 @@ const Services = () => {
           <div className='card-deck pt-4 mt-md-4'>
             <div className='card'>
               <img
-                src='images/g1.jpg'
+                src='../../assets/g1.jpg'
                 className='img-fluid'
                 alt='Card'
               />
@@ -75,7 +75,7 @@ const Services = () => {
                 <h5 className='card-title'>WAREHOUSE & STORAGE</h5>
                 <p className='card-text mb-3 '>
                   By understanding your issues and anticipating your business
-                  and logistics needs, United Parcel Courier provide robust
+                  and logistics needs, Bolt Parcel Express provide robust
                   solutions that will drive value for your business.
                 </p>
                 <div className='ab_button'></div>
@@ -83,14 +83,14 @@ const Services = () => {
             </div>
             <div className='card'>
               <img
-                src='images/g2.jpg'
+                src='../../assets/g2.jpg'
                 className='img-fluid'
                 alt='Card'
               />
               <div className='card-body w3ls-card'>
                 <h5 className='card-title'>LEAD LOGISTICS PROVIDER (LLP)</h5>
                 <p className='card-text mb-3 '>
-                  At United Parcel Courier , being LLP means instigating and
+                  At Bolt Parcel Express , being LLP means instigating and
                   managing change across your entire supply chain, to meet
                   changing business and customer demands.
                 </p>
@@ -99,18 +99,18 @@ const Services = () => {
             </div>
             <div className='card'>
               <img
-                src='images/g3.jpg'
+                src='../../assets/g3.jpg'
                 className='img-fluid'
                 alt='Card'
               />
               <div className='card-body w3ls-card'>
                 <h5 className='card-title'>EXPRESS DELIVERY SERVICES</h5>
                 <p className='card-text mb-3 '>
-                  When you ship with United Parcel Courier – you’re shipping
+                  When you ship with Bolt Parcel Express you’re shipping
                   with specialists in international shipping and courier
                   delivery services! With our wide range of express parcel and
                   package services, along with shipping and tracking solutions
-                  to fit your needs – learn how United Parcel Courier can
+                  to fit your needs learn how Bolt Parcel Express can
                   deliver!
                 </p>
                 <div className='ab_button'></div>

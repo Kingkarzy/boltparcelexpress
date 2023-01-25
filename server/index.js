@@ -45,4 +45,6 @@ mongoose
     // Location.insertMany(location);
     // Package.insertMany(packages);
   })
-  .catch((err) => console.log(`${err} did not connect to the server`));
+  .catch((err) =>
+    console.log(`${err} did not connect to the server`)
+  );

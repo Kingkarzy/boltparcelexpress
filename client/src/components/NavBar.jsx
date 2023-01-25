@@ -19,7 +19,8 @@ import { setMode } from 'state';
 import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
-  const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
+  const [isMobileMenuToggled, setIsMobileMenuToggled] =
+    useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const isNonMobileScreens = useMediaQuery('(min-width: 1024px)');
@@ -36,6 +37,11 @@ const Navbar = () => {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
+        position: 'fixed',
+        width: '100%',
+        zIndex: '99',
+        boxShadow:
+          '0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%)',
       }}
       padding='1rem 6%'
       backgroundColor={alt}
@@ -51,16 +57,16 @@ const Navbar = () => {
         <Typography
           fontWeight='bold'
           fontSize='clamp(1rem, 2rem, 2.25rem)'
-          color='primary'
+          color='#28a745'
           onClick={() => navigate('/')}
           sx={{
             '&:hover': {
-              color: primaryLight,
+              color: '#CCAF2D',
               cursor: 'pointer',
             },
           }}
         >
-          Bolt Parcel
+          Bolt Parcel Express
         </Typography>
       </Box>
 
@@ -80,7 +86,20 @@ const Navbar = () => {
             onClick={() => navigate('/')}
             sx={{
               '&:hover': {
-                color: '#00D5FA',
+                color: '#28a745',
+                cursor: 'pointer',
+              },
+            }}
+          >
+            Home
+          </Typography>
+          <Typography
+            fontWeight='bold'
+            // color='primary'
+            onClick={() => navigate('/about')}
+            sx={{
+              '&:hover': {
+                color: '#28a745',
                 cursor: 'pointer',
               },
             }}
@@ -90,10 +109,10 @@ const Navbar = () => {
           <Typography
             fontWeight='bold'
             // color='primary'
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/contact')}
             sx={{
               '&:hover': {
-                color: '#00D5FA',
+                color: '#28a745',
                 cursor: 'pointer',
               },
             }}
@@ -103,10 +122,10 @@ const Navbar = () => {
           <Typography
             fontWeight='bold'
             // color='primary'
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/services')}
             sx={{
               '&:hover': {
-                color: '#00D5FA',
+                color: '#28a745',
                 cursor: 'pointer',
               },
             }}
@@ -116,10 +135,10 @@ const Navbar = () => {
           <Typography
             fontWeight='bold'
             // color='primary'
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/track')}
             sx={{
               '&:hover': {
-                color: '#00D5FA',
+                color: '#28a745',
                 cursor: 'pointer',
               },
             }}
@@ -161,7 +180,9 @@ const Navbar = () => {
             p='1rem'
           >
             <IconButton
-              onClick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}
+              onClick={() =>
+                setIsMobileMenuToggled(!isMobileMenuToggled)
+              }
             >
               <Close />
             </IconButton>
@@ -180,7 +201,72 @@ const Navbar = () => {
             alignItems='center'
             gap='3rem'
           >
-            <IconButton
+            <Typography
+              fontWeight='bold'
+              // color='primary'
+              onClick={() => navigate('/')}
+              sx={{
+                '&:hover': {
+                  color: '#28a745',
+                  cursor: 'pointer',
+                },
+              }}
+            >
+              Home
+            </Typography>
+            <Typography
+              fontWeight='bold'
+              // color='primary'
+              onClick={() => navigate('/about')}
+              sx={{
+                '&:hover': {
+                  color: '#28a745',
+                  cursor: 'pointer',
+                },
+              }}
+            >
+              About
+            </Typography>
+            <Typography
+              fontWeight='bold'
+              // color='primary'
+              onClick={() => navigate('/contact')}
+              sx={{
+                '&:hover': {
+                  color: '#28a745',
+                  cursor: 'pointer',
+                },
+              }}
+            >
+              Contact
+            </Typography>
+            <Typography
+              fontWeight='bold'
+              // color='primary'
+              onClick={() => navigate('/services')}
+              sx={{
+                '&:hover': {
+                  color: '#28a745',
+                  cursor: 'pointer',
+                },
+              }}
+            >
+              Services
+            </Typography>
+            <Typography
+              fontWeight='bold'
+              // color='primary'
+              onClick={() => navigate('/track')}
+              sx={{
+                '&:hover': {
+                  color: '#28a745',
+                  cursor: 'pointer',
+                },
+              }}
+            >
+              Track
+            </Typography>
+            {/*  <IconButton
               onClick={() => dispatch(setMode())}
               sx={{ fontSize: '25px' }}
             >
@@ -189,9 +275,7 @@ const Navbar = () => {
               ) : (
                 <LightMode sx={{ color: dark, fontSize: '25px' }} />
               )}
-            </IconButton>
-            <Notifications sx={{ fontSize: '25px' }} />
-            <Help sx={{ fontSize: '25px' }} />
+            </IconButton> */}
           </Box>
         </Box>
       )}

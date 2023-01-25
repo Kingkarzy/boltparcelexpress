@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 
 const adminIds =  new mongoose.Types.ObjectId();
 
+
 export const admin = [
   {
     _id: adminIds,
@@ -13,10 +14,32 @@ export const admin = [
 ];
 
 export const packages = [
+  // {
+  //   _id: new mongoose.Types.ObjectId(),
+  //   packageId: "123456789",
+  //   packageName: "NOthing but rose",
+  //   packageType: "frigile", 
+  //   packageWeight: "20kg",
+  //   senderFirstName: "fakesender",
+  //   senderLastName: "mia",
+  //   recieverFirstName:"Steve",
+  //   recieverLastName: "Ralph",
+  //   recieverEmail: "receiver@gmail.com",
+  //   recieverPhone: 789848849,
+  //   currentStatus: ["ON ROUTE LA"], 
+  //   currentLocation: ["ON THE MOVE"],
+  //   time: ["12:23"], 
+  //   date: ["12-12-2022"],
+  //   pieces: 12,
+  //   origin:"us",
+  //   destination: "netherland",
+  //   startDate: "2015-02-12",
+  //   locationName: ["California, USA", "GHANA"],
+  // },
   {
     _id: new mongoose.Types.ObjectId(),
-    packageId: "123456789",
-    packageName: "NOthing but rose",
+    packageId: "1234567",
+    packageName: "BLACK BOX",
     packageType: "frigile", 
     packageWeight: "20kg",
     senderFirstName: "fakesender",
@@ -25,10 +48,10 @@ export const packages = [
     recieverLastName: "Ralph",
     recieverEmail: "receiver@gmail.com",
     recieverPhone: 789848849,
-    currentStatus: "ON ROUTE LA", 
-    currentLocation: "ON THE MOVE",
-    time: "12:23", 
-    date: "12-12-2022",
+    currentStatus: ["ON ROUTE LA", "update my guy"], 
+    currentLocation: ["ON THE MOVE", "on route"],
+    time: ["12:23", "07:56"], 
+    date: ["12-12-2022", "13-01-2023"],
     pieces: 12,
     origin:"us",
     destination: "netherland",
@@ -37,10 +60,11 @@ export const packages = [
   },
 ];
 
+
 export const location = [
   {
     _id: new mongoose.Types.ObjectId(),
-    locationName: "California, USA",
+    locationName: ["California, USA"],
   },
 ];
 

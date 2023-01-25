@@ -10,10 +10,10 @@ const Contact = () => {
             <div className='col-md-6 contact-left'>
               <div className='agile-contact-top'>
                 <h4>Address </h4>
-                <h6 style='color: rgb(185, 180, 180); margin: 15px;'>
+                <h6 style={{ color: 'rgb(185, 180, 180)', margin: '15px' }}>
                   We’d Love To Hear From You.
                 </h6>
-                <div style='text-align: left;'>
+                <div style={{ textAlign: 'left' }}>
                   <p>
                     {' '}
                     <i className='fa fa-location-arrow'></i>&emsp; 7899
@@ -29,53 +29,47 @@ const Contact = () => {
                 </div>
               </div>
               <div className='contact-bottom'>
-                <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.3060153584!2d-74.2598711799434!3d40.69714940555201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1510842846108'></iframe>
+                <iframe
+                  title='map'
+                  src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.3060153584!2d-74.2598711799434!3d40.69714940555201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1510842846108'
+                ></iframe>
               </div>
             </div>
             <div className='col-md-6 w3layouts-reg-form contact-form-row-agileinfo'>
-              <h4 className='form-con-txt'>send us a mail</h4>
+              <h4 className='form-con-txt text-center mb-2'>Contact Us</h4>
               <form
-                action='#'
-                method='post'
-                className='banner_form contact-inner-form'
-              >
-                <div className='contact-form-left contact-field1'>
+                  action='#'
+                  method='post'
+                  className='banner_form '
+                >
                   <div className='sec-left'>
-                    <label className='contact-form-text'>Name</label>
+                    <label className='contact-form-text'>
+                      Email Address
+                    </label>
                     <input
-                      placeholder='your name '
-                      name='first name'
-                      type='text'
-                      required=''
-                    />
-                  </div>
-                  <div className='sec-right'>
-                    <label className='contact-form-text'>Email</label>
-                    <input
-                      placeholder='xxx@xx.com '
-                      name='first name'
+                      placeholder='Email Address '
+                      name='email'
                       type='email'
                       required=''
                     />
                   </div>
-                </div>
-                <div className='contact-form-right contact-field2'>
+                  <div className='sec-right'>
+                    <label className='contact-form-text'>
+                      Message
+                    </label>
+                    <textarea
+                      className='form-control'
+                      name='message'
+                      id='exampleFormControlTextarea1'
+                      rows='3'
+                      placeholder='Message'
+                    ></textarea>
+                  </div>
                   <input
                     type='submit'
-                    value='send message'
+                    value='Send Message'
                   />
-                </div>
-                <div className='clearfix'></div>
-                <div className='form-tx contact-field3'>
-                  <label className='contact-form-text'>Message</label>
-                  <textarea
-                    className='form-control'
-                    name='message'
-                    rows='3'
-                    placeholder='Message'
-                  ></textarea>
-                </div>
-              </form>
+                </form>
             </div>
           </div>
         </div>
