@@ -122,7 +122,7 @@ const Form = () => {
         gridTemplateColumns: 'repeat(1, 1fr)',
         justifyContent: 'center',
         mb: '5rem',
-        mt: '2rem',
+        // mt: '2rem',
         placeItems: 'center center',
       }}
     >
@@ -168,7 +168,7 @@ const Form = () => {
             // backgroundColor: 'rgba(255,250,245,0.5)',
             display: 'flex',
             // justifyContent: 'center',
-            color: 'black',
+            // color: 'black',
           }}
         >
           <List sx={{ alignItems: 'right' }}>

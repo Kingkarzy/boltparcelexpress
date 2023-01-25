@@ -5,7 +5,10 @@ const About = () => {
     <Box>
       <section className='banner-1'></section>
       <section className='banner_bottom py-md-5'>
-        <div className='container py-4 mt-2'>
+        <div
+          className='container mt-2'
+          style={{ paddingTop: '2rem' }}
+        >
           <h3 className='tittle-w3ls text-center mb-3'>About Us</h3>
           <p className='tit text-center mx-auto'>
             Bolt Parcel Express is the largest consumer-to-consumer

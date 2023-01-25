@@ -66,7 +66,7 @@ const Navbar = () => {
             },
           }}
         >
-          Bolt Parcel Express
+          Bolt Parcel
         </Typography>
       </Box>
 
@@ -281,7 +281,7 @@ const Navbar = () => {
             >
               Track
             </Typography>
-            {/*  <IconButton
+            <IconButton
               onClick={() => dispatch(setMode())}
               sx={{ fontSize: '25px' }}
             >
@@ -290,7 +290,7 @@ const Navbar = () => {
               ) : (
                 <LightMode sx={{ color: dark, fontSize: '25px' }} />
               )}
-            </IconButton> */}
+            </IconButton>
           </Box>
         </Box>
       )}

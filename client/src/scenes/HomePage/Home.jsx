@@ -275,7 +275,10 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='distance-w3 py-md-5'>
+      <section
+        className='distance-w3 py-md-5'
+        style={{ paddingBottom: '2rem' }}
+      >
         <div className='container mt-2'>
           <div className='row'>
             <div className='col-md-8 distance-agile-left'>
