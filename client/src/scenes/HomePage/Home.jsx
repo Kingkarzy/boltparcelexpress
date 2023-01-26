@@ -16,6 +16,10 @@ const Home = () => {
   const [packageDetails, setPackageDetails] = useState(null);
   const { packageId } = useParams();
 
+  const [count, setCount] = useState(1947);
+  const [count1, setCount1] = useState(3612);
+  const [count2, setCount2] = useState(29);
+
   const handleSubmit = async (values) => {
     console.log(values);
     const response = await fetch(
@@ -34,16 +38,19 @@ const Home = () => {
   };
 
             // ON SCROLL EVENT 
-  
-  const [count, setCount] = useState(200);
-  const [count1, setCount1] = useState(612);
-  const [count2, setCount2] = useState(329);
-
-    const handleScroll = () => {
-        if(count < 765) setCount(prevCount => prevCount + 1);
-        if(count1 < 1426) setCount(prevCount => prevCount + 1);
-        if(count2 < 694) setCount(prevCount => prevCount + 1);
-    };
+     
+      const handleScroll = () => {
+       const interval =  setInterval(() => {
+                    if(count < 31425) setCount(prevCount => prevCount + 1);
+                    if(count1 < 94626) setCount(prevCount => prevCount + 1);
+                    if(count2 < 94) setCount(prevCount => prevCount + 1);
+                    else clearInterval(interval);
+                    }, 50) 
+                    return () => clearInterval(interval);
+                  };
+                     
+                 
+    
     
   /*   const handleSubmit = async (values) => {
     await getPackageDetails(values);
@@ -87,10 +94,10 @@ const Home = () => {
                     margin: '10rem, 0 !important',
                     padding: '0.25rem, 0',
                     '&:hover': {
-                      backgroundColor: '#CCAF2D',
-                      color: 'white',
+                      backgroundColor: '#dfc7aa',
+                      color: 'green',
                       fontSize:'1.2rem',
-        
+                      border: "1px solid green",
                     },
                   }}
                 >
@@ -324,18 +331,18 @@ const Home = () => {
             China; Shenzhen, China
           </p>
         
-          <div className='row inner_w3l_agile_grids-1 mt-md-4'>
-            <div className='col-sm-4 w3layouts_stats_left w3_counter_grid' onScroll={handleScroll}>
+          <div className='row inner_w3l_agile_grids-1 mt-md-4' onScroll={handleScroll}>
+            <div className='col-sm-4 w3layouts_stats_left w3_counter_grid'>
               <p className='counter'>{count}</p>
               <h3>Satisfied Clients</h3>
               <h6>Pure satisfaction</h6>
             </div>
-            <div className='col-sm-4 w3layouts_stats_left w3_counter_grid1' onScroll={handleScroll}>
+            <div className='col-sm-4 w3layouts_stats_left w3_counter_grid1' >
               <p className='counter'>{count1}</p>
               <h3>Successful Shippings</h3>
               <h6>Shipping</h6>
             </div>
-            <div className='col-sm-4 w3layouts_stats_left w3_counter_grid2' onScroll={handleScroll}>
+            <div className='col-sm-4 w3layouts_stats_left w3_counter_grid2'>
               <p className='counter'>{count2}</p>
               <h3>Branches Worldwide</h3>
               <h6>Highest level of credibility</h6>
