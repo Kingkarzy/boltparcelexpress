@@ -32,6 +32,19 @@ const Home = () => {
     const data = await response.json();
     setPackageDetails(data);
   };
+
+            // ON SCROLL EVENT 
+  
+  const [count, setCount] = useState(200);
+  const [count1, setCount1] = useState(612);
+  const [count2, setCount2] = useState(329);
+
+    const handleScroll = () => {
+        if(count < 765) setCount(prevCount => prevCount + 1);
+        if(count1 < 1426) setCount(prevCount => prevCount + 1);
+        if(count2 < 694) setCount(prevCount => prevCount + 1);
+    };
+    
   /*   const handleSubmit = async (values) => {
     await getPackageDetails(values);
   }; */
@@ -52,7 +65,7 @@ const Home = () => {
               <h3>
                 <b className='text-success'> BOLT EXPRESS </b>
               </h3>
-              <h2 style={{ color: 'white' }}>Track Package</h2>
+              <h6 style={{ color: 'black', margin:'auto', width:'50%', marginTop:'4rem' }}>Bolt ahead with our lightning fast delivery service</h6>
 
               <div
                 style={{
@@ -76,6 +89,8 @@ const Home = () => {
                     '&:hover': {
                       backgroundColor: '#CCAF2D',
                       color: 'white',
+                      fontSize:'1.2rem',
+        
                     },
                   }}
                 >
@@ -180,7 +195,7 @@ const Home = () => {
                     className='text-center'
                     // style={{ color: 'grey' }}
                   >
-                    Email Customer Service
+                    Customer Service
                   </p>
                 </div>
                 <form
@@ -193,7 +208,7 @@ const Home = () => {
                       Email Address
                     </label>
                     <input
-                      placeholder='Email Address '
+                      // placeholder='Email Address '
                       name='email'
                       type='email'
                       required=''
@@ -208,7 +223,7 @@ const Home = () => {
                       name='message'
                       id='exampleFormControlTextarea1'
                       rows='3'
-                      placeholder='Message'
+                      // placeholder='Message'
                     ></textarea>
                   </div>
                   <input
@@ -259,10 +274,10 @@ const Home = () => {
         style={{ marginTop: '2rem' }}
       >
         <div className='container mt-2'>
-          <h3 className='tittle-w3ls text-center mb-3 text-white'>
+          <h3 className='tittle-w3ls text-center mb-3' style={{color: "black"}}>
             Express Delivery Services & International Shipping
           </h3>
-          <p className='tit text-center mx-auto text-white'>
+          <p className='tit text-center mx-auto ' style={{color: "black"}}>
             Our platform is designed to make the shipping process as
             simple and hassle-free as possible. Our user-friendly
             interface allows you to create shipping labels and track
@@ -308,19 +323,20 @@ const Home = () => {
             Hamilton, Ontario, Canada; Hong Kong SAR, China; Shanghai,
             China; Shenzhen, China
           </p>
+        
           <div className='row inner_w3l_agile_grids-1 mt-md-4'>
-            <div className='col-sm-4 w3layouts_stats_left w3_counter_grid'>
-              <p className='counter'>1,546</p>
+            <div className='col-sm-4 w3layouts_stats_left w3_counter_grid' onScroll={handleScroll}>
+              <p className='counter'>{count}</p>
               <h3>Satisfied Clients</h3>
               <h6>Pure satisfaction</h6>
             </div>
-            <div className='col-sm-4 w3layouts_stats_left w3_counter_grid1'>
-              <p className='counter'>14,345</p>
+            <div className='col-sm-4 w3layouts_stats_left w3_counter_grid1' onScroll={handleScroll}>
+              <p className='counter'>{count1}</p>
               <h3>Successful Shippings</h3>
               <h6>Shipping</h6>
             </div>
-            <div className='col-sm-4 w3layouts_stats_left w3_counter_grid2'>
-              <p className='counter'>563</p>
+            <div className='col-sm-4 w3layouts_stats_left w3_counter_grid2' onScroll={handleScroll}>
+              <p className='counter'>{count2}</p>
               <h3>Branches Worldwide</h3>
               <h6>Highest level of credibility</h6>
             </div>
@@ -331,20 +347,6 @@ const Home = () => {
       <script src='../../js/jquery-2.2.3.min.js'></script>
       <script src='../../js/move-top.js'></script>
       <script src='../../js/easing.js'></script>
-      <script>
-        jQuery(document).ready(function ($){' '}
-        {$('.scroll').click(function (event) {
-          event.preventDefault();
-
-          $('html,body').animate(
-            {
-              scrollTop: $(this.hash).offset().top,
-            },
-            1000
-          );
-        })}
-        )
-      </script>
       <script src='../../js/jquery.waypoints.min.js'></script>
       <script src='../../js/jquery.countup.js'></script>
       <script>$('.counter').countUp();</script>

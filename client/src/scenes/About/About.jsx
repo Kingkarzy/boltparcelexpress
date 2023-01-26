@@ -29,7 +29,7 @@ const About = () => {
                 />
               </div>
               <div className='col-md-6 banner_bottom_left ourteam'>
-                <h4>
+                <p>
                   BPExpress was founded with the goal of making parcel
                   delivery simple and convenient for everyone. We
                   understand that shipping can be a hassle, which is
@@ -41,7 +41,7 @@ const About = () => {
                   committed to providing the highest level of customer
                   service, and we're always looking for new ways to
                   improve and expand our offerings.
-                </h4>
+                </p>
               </div>
             </div>
           </div>

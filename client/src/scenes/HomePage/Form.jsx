@@ -11,6 +11,7 @@ import {
   Divider,
   CardContent,
   Grid,
+  useMediaQuery
 } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 // import { styled } from '@mui/system';
@@ -101,11 +102,13 @@ const Form = () => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  const isNonMobileScreens = useMediaQuery('(min-width: 1024px)');
+
   function handleSubmit(e) {
     e.preventDefault();
     localStorage.setItem('packageId', packageId);
     axios
-      .get(`http://localhost:5001/users/${packageId}`)
+      .get(`http://localhost:5000/users/${packageId}`)
       .then((response) => {
         setResult(response.data);
       })
@@ -116,6 +119,7 @@ const Form = () => {
   }
 
   return (
+  
     <Box
       sx={{
         display: 'grid',
@@ -138,6 +142,9 @@ const Form = () => {
         below
       </Typography>
 
+
+        {/***************        DESKTOP FORM         */}
+
       <form
         onSubmit={handleSubmit}
         className={classes.form}
@@ -158,10 +165,12 @@ const Form = () => {
           Track
         </Button>
       </form>
-      <br />
+      <br/>
+
       {/**********   PACKAGE DETAILS */}
       {Object.keys(result).length !== 0 && (
         <Card
+          
           style={{
             width: '90%',
             height: '100%',
@@ -190,12 +199,19 @@ const Form = () => {
                         Tracking Code: {item.packageId}
                       </Typography>
                     </Grid>
+
+
+
+
+                    {/* DESKTOP DISPLAY */}
+  {isNonMobileScreens ? (
+            <>
                     <Grid
                       item
                       xs={4}
                     >
                       <Typography
-                        sx={{ maxWidth: '100%', display: 'flex' }}
+                        sx={{ width: '100%', display: 'flex' }}
                       >
                         <Typography sx={{ fontWeight: 'bold' }}>
                           Package For: &nbsp;
@@ -244,17 +260,85 @@ const Form = () => {
                         Weight: {item.packageWeight}
                       </Typography>
                     </Grid>
-                  </Grid>
                   <br />
+           
+            </>
+               ) : (  
+
+                // MOBILE PHONES DISPLAY
+                
+            <>    
+              <Grid
+                item
+                xs={6}
+                sx={{ width: '100%'}}
+              >
+                <Typography
+                  // sx={{ width: '100%', display: 'grid' }}
+                >
+                  <span sx={{ fontWeight: 'bold', fontSize:'1.3rem' }}>
+                    Package For:
+                    </span> {" "}
+                  {item.recieverFirstName}{' '}
+                  {item.recieverLastName}
+                </Typography>
+              </Grid>
+              <Grid
+                item
+                xs={6}
+              >
+                <Typography>
+                  Sender: {item.senderFirstName}{' '}
+                  {item.senderLastName}
+                </Typography>
+              </Grid>
+              <Grid
+                item
+                xs={6}
+              >
+                <Typography>
+                  Destination: {item.destination}
+                </Typography>
+              </Grid>
+              <Grid
+                item
+                xs={6}
+              >
+                <Typography>Origin: {item.origin}</Typography>
+              </Grid>
+              <Grid
+                item
+                xs={6}
+              >
+                <Typography>
+                  Package: {item.packageName}
+                </Typography>
+              </Grid>
+
+             
+              <Grid
+                item
+                xs={6}
+
+              >
+                <Typography>
+                  Weight: {item.packageWeight}
+                </Typography>
+              </Grid>
+            <br />
+            </>
+            )}
 
                   <Box
+                    mt="1.5rem"
                     sx={{
                       width: '100%',
                       placeItems: 'center center',
                       display: 'flex',
+                      
                     }}
                   >
-                    <Typography sx={{ fontWeight: 'bold' }}>
+                    <Typography mr="0.4rem" sx={{ fontWeight: 'bold' }}>
                       Origin
                     </Typography>
                     <LinearProgress
@@ -263,7 +347,7 @@ const Form = () => {
                       color='success'
                       sx={{ width: '80%', margin: 'auto' }}
                     />
-                    <Typography sx={{ fontWeight: 'bold' }}>
+                    <Typography ml="0.4rem"  sx={{ fontWeight: 'bold' }}>
                       Destination
                     </Typography>
                   </Box>
@@ -316,6 +400,7 @@ const Form = () => {
                       </CardContent>
                     </div>
                   ))}
+                  </Grid>
                 </CardContent>
               </ListItem>
             ))}
