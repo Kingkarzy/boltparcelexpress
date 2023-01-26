@@ -58,24 +58,21 @@ const PackageSchema = new mongoose.Schema({
         max:99999999999,
     },
     currentStatus:{
-        type: String, 
+        type: Array, 
+        default: [],
         required: true,
-        min:2,
-        max:50,
     },
     currentLocation:{
-        type: String, 
-        required: true,
-        min:2,
-        max:50,
+        type: Array, 
+        default: [],
     },
     time:{
-        type: String,  
-        min:2,
-        max:50,
+        type: Array, 
+        default: [],  
     },
     date:{
-        type: Date, 
+        type: Array, 
+        default: [],
         required: true,
     },
     pieces:{
