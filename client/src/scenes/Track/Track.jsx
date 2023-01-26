@@ -9,14 +9,17 @@ const Track = () => {
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        // justifyContent: 'center',
+        justifyContent: 'center',
         width: '100vw',
         alignItems: 'center',
+        paddingTop: '9rem',
+        textAlign: 'center',
       }}
     >
       <Typography
-        variant='h1'
-        sx={{ m: '2rem, 0, 0' }}
+        variant='h3'
+        className='tittle-w3ls text-center mb-3'
+        sx={{ m: '0rem, 0, 0' }}
       >
         TRACK YOUR PARCEL
       </Typography>

@@ -191,7 +191,7 @@ const Footer = () => {
            <br/>
             <br/>
           <div style={{ textAlign: 'center', color: 'grey' }}>
-            Copyright&copy; 2023 UPC Express, Inc. All rights reserved
+            Copyright&copy; 2023 Bolt Parcel Express, Inc. All rights reserved
           </div>
         </div>
       </section>

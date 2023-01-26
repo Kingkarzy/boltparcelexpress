@@ -1,12 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
 html,
 body {
-  background: #fff;
-  font-family: sans-serif;
+  /* background: #fff; */
+  font-family: Rubik, sans-serif;
 }
 
 p {
   margin: 0;
-  color: #777;
+  /* color: #777; */
   font-size: 15px;
   line-height: 1.8;
 }
@@ -28,7 +29,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Rubik', sans-serif;
+  font-family: Rubik, sans-serif;
   margin: 0;
 }
 
@@ -216,7 +217,7 @@ li.nav-item {
 label.contact-form-text {
   font-size: 15px;
   margin: 0.8em 0 0.5em;
-  color: #ffffff;
+  /* color: #ffffff; */
   font-weight: 400;
 }
 .agileinfo-contact-main-address span {
@@ -314,7 +315,7 @@ label.header span {
 }
 .banner-subg1 h3,
 .about-bottom h5 {
-  color: #222222;
+  /* color: #222222; */
   font-size: 25px;
   font-weight: 500;
   text-transform: capitalize;
@@ -342,12 +343,12 @@ label.header span {
   width: 20%;
   top: -1px;
 }
-.banner_bottom_grid img{
+.banner_bottom_grid img {
   width: 60%;
   margin-left: 3rem;
 }
 .form-text p {
-  color: #fff;
+  /* color: #fff; */
   margin-top: 5px;
 }
 .form-tx textarea {
@@ -396,7 +397,7 @@ h4.modal-title {
 }
 /*-- //banner-bottom --*/
 h3.tittle-w3ls {
-  color: #1b1b1b;
+  /* color: #1b1b1b; */
   font-size: 3em;
   letter-spacing: 2px;
   font-weight: 500;
@@ -404,7 +405,7 @@ h3.tittle-w3ls {
 }
 .banner_bottom_left h4 {
   font-size: 2em;
-  color: #3c3c3c;
+  /* color: #3c3c3c; */
   letter-spacing: 1px;
   position: relative;
   font-weight: 500;
@@ -442,15 +443,15 @@ h5.card-title {
   color: #ffdc39;
 }
 p.card-text {
-  color: #777;
+  /* color: #777; */
   font-size: 15px;
   line-height: 1.8em;
   letter-spacing: 1px;
 }
 .w3ls-card {
   padding: 25px;
-  background-color: #fff;
-  border: 1px solid #e5e5e5;
+  /* background-color: #fff; */
+  /* border: 1px solid #e5e5e5; */
   border-top: 0;
   border-radius: 0 0 5px 5px;
 }
@@ -578,7 +579,7 @@ section.slider {
 }
 .w3layouts_stats_left h3 {
   font-size: 20px;
-  color: #2c363e;
+  /* color: #2c363e; */
   letter-spacing: 2px;
   font-weight: 500;
 }
@@ -850,7 +851,7 @@ p.copy-right a:hover {
 /*-- //team --*/
 .banner_bottom_left h4 {
   font-size: 1.5em;
-  color: #3c3c3c;
+  /* color: #3c3c3c; */
   letter-spacing: 1px;
   position: relative;
   font-weight: 500;
@@ -968,20 +969,20 @@ p.copy-right a:hover {
   display: inline-block;
 }
 .agile-contact-top {
-  background: #000000;
+  /* background: #000000; */
   padding: 12px;
   text-align: center;
 }
 .agile-contact-top h4,
 h4.form-con-txt {
   font-size: 25px;
-  color: #fff;
+  /* color: #fff; */
   letter-spacing: 1px;
   text-transform: capitalize;
 }
 
 .agile-contact-top p {
-  color: #c1bfbf;
+  /* color: #c1bfbf; */
   margin: 6px 0 3px;
 }
 /*-- //contact --*/
