@@ -66,7 +66,7 @@ const Navbar = () => {
             },
           }}
         >
-          Bolt Parcel
+          Express Boxed
         </Typography>
       </Box>
 
@@ -157,7 +157,7 @@ const Navbar = () => {
         <IconButton
           onClick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}
         >
-          <Menu />
+          <Menu fontSize='large'/>
         </IconButton>
       )}
 
@@ -184,7 +184,7 @@ const Navbar = () => {
                 setIsMobileMenuToggled(!isMobileMenuToggled)
               }
             >
-              <Close />
+              <Close fontSize='large'/>
             </IconButton>
           </Box>
 

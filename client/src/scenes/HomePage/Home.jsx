@@ -3,7 +3,6 @@ import {
   Card,
   IconButton,
   Button,
-  Typography,
 } from '@mui/material';
 import $ from 'jquery';
 import { useState } from 'react';
@@ -70,7 +69,7 @@ const Home = () => {
           >
             <div className='banner-info info2'>
               <h3>
-                <b className='text-success'> BOLT EXPRESS </b>
+                <b className='text-success'>  EXPRESS BOXED </b>
               </h3>
               <h6 style={{ color: 'black', margin:'auto', width:'50%', marginTop:'4rem' }}>Bolt ahead with our lightning fast delivery service</h6>
 
@@ -87,7 +86,7 @@ const Home = () => {
                 <br />
                 <Button
                   href='/track'
-                  size='medium'
+                  size='large'
                   sx={{
                     backgroundColor: '#28a745',
                     color: 'white',
@@ -96,7 +95,7 @@ const Home = () => {
                     '&:hover': {
                       backgroundColor: '#dfc7aa',
                       color: 'green',
-                      fontSize:'1.2rem',
+                      fontSize:'1rem',
                       border: "1px solid green",
                     },
                   }}
@@ -218,7 +217,7 @@ const Home = () => {
                       // placeholder='Email Address '
                       name='email'
                       type='email'
-                      required=''
+                      required
                     />
                   </div>
                   <div className='sec-right'>
@@ -309,7 +308,7 @@ const Home = () => {
               </h4>
             </div>
             <div className='col-md-4 distance-agile-right'>
-              <a href='mailto:info@boltparcelexpress.com'>
+              <a href='mailto:info@expressboxed.com'>
                 {' '}
                 Contact Us{' '}
               </a>

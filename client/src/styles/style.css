@@ -604,6 +604,8 @@ p.stap {
   text-align: center;
 }
 /*-- //stats --*/
+
+
 /*-- footer --*/
 
 .footer {
@@ -984,6 +986,9 @@ h4.form-con-txt {
 .agile-contact-top p {
   /* color: #c1bfbf; */
   margin: 6px 0 3px;
+}
+.sec-right textarea{
+  min-height: 300px;
 }
 /*-- //contact --*/
 /*--Typography--*/

@@ -75,7 +75,7 @@ const Services = () => {
       <section className='wthree-row w3-about py-md-5'>
         <div className='container mt-2'>
           <h3 className='tittle-w3ls text-center mb-3'>
-            Smooth Shipping.
+            Smooth Shipping
           </h3>
           <div className='card-deck mt-md-4'>
             <Card className='card'>
@@ -85,8 +85,8 @@ const Services = () => {
                 alt='Card'
               />
               <div className='card-body w3ls-card'>
-                <h5 className='card-title'>WAREHOUSE & STORAGE</h5>
-                <p className='card-text mb-3 '>
+                <h5 className='card-title  text-center'>WAREHOUSE & STORAGE</h5>
+                <p className='card-text mb-3 text-center'>
                   By understanding your issues and anticipating your
                   business and logistics needs, Bolt Parcel Express
                   provide robust solutions that will drive value for
@@ -102,10 +102,10 @@ const Services = () => {
                 alt='Card'
               />
               <div className='card-body w3ls-card'>
-                <h5 className='card-title'>
+                <h5 className='card-title  text-center'>
                   LEAD LOGISTICS PROVIDER (LLP)
                 </h5>
-                <p className='card-text mb-3 '>
+                <p className='card-text mb-3  text-center'>
                   At Bolt Parcel Express , being LLP means instigating
                   and managing change across your entire supply chain,
                   to meet changing business and customer demands.
@@ -120,10 +120,10 @@ const Services = () => {
                 alt='Card'
               />
               <div className='card-body w3ls-card'>
-                <h5 className='card-title'>
+                <h5 className='card-title  text-center'>
                   EXPRESS DELIVERY SERVICES
                 </h5>
-                <p className='card-text mb-3 '>
+                <p className='card-text mb-3  text-center'>
                   When you ship with Bolt Parcel Express you’re
                   shipping with specialists in international shipping
                   and courier delivery services! With our wide range

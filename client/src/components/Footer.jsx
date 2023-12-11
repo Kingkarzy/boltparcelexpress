@@ -160,9 +160,9 @@ const Footer = () => {
                   <div className='address-right'>
                     <h6>Email Address</h6>
                     <p>
-                      <a href='mailto:info@upcxpress.com' >
+                      <a href='mailto:info@expressboxed.com' >
                         {' '}
-                        info@boltparcelexpress.com{' '}
+                        info@expressboxed.com{' '}
                       </a>
                     </p>
                   </div>
